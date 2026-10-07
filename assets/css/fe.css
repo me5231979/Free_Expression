@@ -153,3 +153,21 @@
   .fe-tabs button b{ overflow-wrap:anywhere; }
   .fe-tab-ok{ width:12px; height:12px; }
 }
+
+/* ── what you will learn: objectives tied to the activity that checks each one ── */
+.fe-obj-stage{ align-items:start; }
+.fe-obj{ list-style:none; counter-reset:o; padding:0; margin:10px 0 0; display:grid; gap:6px; }
+.fe-obj li{ counter-increment:o; position:relative; border:1px solid var(--bd); background:var(--card); border-radius:var(--r); padding:8px 14px 8px 46px; color:var(--tx); font-size:.92rem; line-height:1.4; }
+.fe-obj li::before{ content:counter(o); position:absolute; left:16px; top:6px; font-family:var(--serif); font-size:1.35rem; color:var(--eyebrow); }
+.fe-obj b{ color:var(--strong); font-weight:600; }
+.fe-obj small{ display:block; margin-top:4px; font-family:var(--cond); font-weight:700; font-size:.68rem; letter-spacing:.08em; text-transform:uppercase; color:var(--tx3); }
+.fe-how{ list-style:none; padding:0; margin:22px 0 0; display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:10px; max-width:460px; }
+.fe-how li{ border-top:2px solid var(--eyebrow); padding-top:8px; }
+.fe-how b{ display:block; font-family:var(--serif); font-weight:400; font-size:clamp(1.6rem,1.2vw + 1.1rem,2.2rem); line-height:1; color:var(--tx); }
+.fe-how span{ display:block; margin-top:4px; font-size:.82rem; color:var(--tx2); }
+.fe-gap{ margin-top:14px; }
+
+/* lesson 1 check: long answers read better stacked */
+#whyDrill .dq-opts{ grid-template-columns:1fr; }
+#whyDrill .dq-opts button{ text-align:left; font-weight:500; }
+.fe-obj-go{ margin-top:12px; }

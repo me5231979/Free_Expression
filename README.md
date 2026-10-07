@@ -28,8 +28,9 @@ are headlines, activity instructions, and wrong-answer distractors.
 
 | Page | Key | Outline section | Activity (tracked) |
 | --- | --- | --- | --- |
-| Welcome | `home` | Purpose, objectives | |
-| Keep the conditions for inquiry | `why` | I | Open three moments (1870s, 1960s, Today) |
+| Cover | `home` | | |
+| What you will learn | `objectives` | Training purpose, learning objectives | Objectives mapped to the activity that checks each |
+| Keep the conditions for inquiry | `why` | I | Open three moments (1870s, 1960s, Today), then one check |
 | Three principles, one community | `principles` | II.A to II.C | Three tabs, one check each; optional reflection |
 | Not agreement. Conditions | `role` | III | Staff should model: three pairs |
 | Five myths, five realities | `myths` | IV | Call it, then flip five cards |
@@ -41,8 +42,25 @@ are headlines, activity instructions, and wrong-answer distractors.
 | Your one move | `practice` | VIII | Pick a question, commit to one move |
 | A culture to sustain | `learn` | V policies, IX, closing | Resources, policies, glossary, print, exit |
 
-About 1,480 words on screen across 12 pages, about 750 words of narration,
+About 1,650 words on screen across 13 pages, about 750 words of narration,
 about 30 graded decisions.
+
+## Learning objectives (measurable)
+
+The outline's objectives were reworded with observable verbs so each one is
+checked by an activity. The program owner should approve the wording.
+
+| # | Objective | Outline wording it replaces | Measured by |
+| --- | --- | --- | --- |
+| 1 | **Explain** why free expression is central to Vanderbilt's academic mission. | Same | Lesson 1 check |
+| 2 | **Distinguish** among free expression, open forums, and civil discourse. | Same | Lesson 2, three checks |
+| 3 | **Identify** behaviors staff can model to foster constructive dialogue and intellectual openness. | "Identify ways staff can foster..." | Lesson 3, staff should model |
+| 4 | **Classify** rules as limits on time, place, or manner, and describe how these limits allow expression while protecting the rights of others and the university's ability to carry out its mission. | "Understand how time, place, and manner rules..." | Lesson 4, three checks |
+| 5 | **Match** demonstrations, protests, counterprotests, and dissent to their definitions, and **determine** which activities may occur during a protest of an ongoing event. | "Recognize the basic expectations governing..." | Lesson 4, definitions; during a protest |
+| 6 | **Select** the response that best reflects Vanderbilt's approach in situations staff may encounter. | "Apply these principles to situations..." | Lesson 5, three scenarios |
+| 7 | **Describe** one way you will model or strengthen Vanderbilt's commitment to free expression and civil discourse in your role. | New; from outline VIII (reflection) | Lesson 6, your one move |
+
+The five-question check covers objectives 2, 4, 5, and 6 (four of five to pass).
 
 ## Before launch: confirm in `config.js` and with the program owner
 
@@ -83,7 +101,7 @@ own voice. To record real narration, copy Voyage Online's ElevenLabs workflow
 
 Last run 2026-10-07, Chromium (Playwright), after the outline-only rebuild:
 
-- axe-core 4 (WCAG 2.0 / 2.1 / 2.2 A and AA) on all 12 pages, details open,
+- axe-core 4 (WCAG 2.0 / 2.1 / 2.2 A and AA) on all 13 pages, details open,
   at 1440x900 and 320x640: **0 violations**. Automated only; no manual
   screen reader pass yet.
 - No horizontal scroll at 320px on any page.

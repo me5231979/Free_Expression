@@ -182,7 +182,7 @@ if(narr.auto) window.setTimeout(narrPlay, 600);
 
 /* ══════════ PROGRESS ══════════ */
 var SECTIONS = [
-  { k:'why',        no:'01', name:'Why free expression matters', how:'Open all three moments' },
+  { k:'why',        no:'01', name:'Why free expression matters', how:'Open three moments and answer the check' },
   { k:'principles', no:'02', name:'The three core principles',   how:'Open each one and answer its check' },
   { k:'role',       no:'03', name:'Our responsibility as staff', how:'Pick what staff should model' },
   { k:'myths',      no:'04', name:'Myths and realities',         how:'Flip all five cards' },
@@ -307,13 +307,16 @@ document.addEventListener('keydown', function(e){
    offered as an answer to a manner question) or from the outline's myths.
    No examples are invented. */
 
-/* ══════════ lesson 1: three moments open in place ══════════ */
+/* ══════════ lesson 1: three moments open in place, then one check ══════════
+   Done when all three moments are open and the check is answered. */
+var whySeen = {}, whyChecked = false;
+function whyMaybeDone(){ if(Object.keys(whySeen).length === 3 && whyChecked) progDone('why'); }
+document.addEventListener('fe:drilldone', function(e){ if(e.detail === 'why'){ whyChecked = true; whyMaybeDone(); } });
 (function(){
   var list = $('#momentList'); if(!list) return;
-  var seen = {};
   $$('button', list).forEach(function(b, i){ b.addEventListener('click', function(){
     var o = b.getAttribute('aria-expanded') !== 'true'; b.setAttribute('aria-expanded', o ? 'true' : 'false');
-    if(o){ seen[i] = 1; if(Object.keys(seen).length === 3) progDone('why'); }
+    if(o){ whySeen[i] = 1; whyMaybeDone(); }
   }); });
 })();
 
@@ -472,6 +475,9 @@ $$('[data-calls]').forEach(buildCalls);
 
 /* ══════════ drills: one card at a time, feedback after each ══════════ */
 var DRILLS = {
+  why: { prog:null, verb:'answered', items:[
+    { s:'The university’s commitment is...', opts:['Merely to allow disagreement', 'To maintain an environment in which disagreement and intellectual exploration can occur', 'To ensure every conversation is comfortable'], a:1, x:'The university’s commitment is not merely to allow disagreement, but to maintain an environment in which disagreement and intellectual exploration can occur.' }
+  ]},
   role: { prog:'role', verb:'decided', items:[
     { s:'Staff should model...', opts:['Assumption', 'Curiosity'], a:1, x:'Curiosity over assumption.' },
     { s:'When facilitating dialogue, staff should model...', opts:['Questions', 'Declarations'], a:0, x:'Questions over declarations when facilitating dialogue.' },
@@ -516,7 +522,7 @@ function buildDrill(el){
     done[i] = ok ? 1 : 2; if(ok) right++;
     var n = Object.keys(done).length;
     if(status) status.innerHTML = pips() + '<span>' + n + ' of ' + d.items.length + ' ' + d.verb + '.' + (n === d.items.length ? ' ' + right + ' of ' + d.items.length + ' right. Activity complete.' : '') + '</span>';
-    if(n === d.items.length) progDone(d.prog);
+    if(n === d.items.length){ if(d.prog) progDone(d.prog); try{ document.dispatchEvent(new CustomEvent('fe:drilldone', { detail:name })); }catch(err){} }
   });
   if(status) status.innerHTML = pips() + '<span>0 of ' + d.items.length + ' ' + d.verb + '.</span>';
 }

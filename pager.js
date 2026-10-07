@@ -11,6 +11,7 @@ try{
   if(!main) throw new Error('no main');
   var PLAN = [
     { sel:'section.hero',  key:'home',       label:'Welcome',                       mode:'whole' },
+    { sel:'#objectives',   key:'objectives', label:'What you will learn',           mode:'whole' },
     { sel:'#why',          key:'why',        label:'Lesson 1: Why it matters',      mode:'whole' },
     { sel:'#principles',   key:'principles', label:'Lesson 2: The core principles', mode:'whole' },
     { sel:'#role',         key:'role',       label:'Lesson 3: Our responsibility',  mode:'whole' },
