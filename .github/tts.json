@@ -1,0 +1,13 @@
+{
+  "_note": "ElevenLabs narration for Free Expression at Vanderbilt, voice kJKMPwrIKzwVkMKOfRtr (https://elevenlabs.io/voices/kJKMPwrIKzwVkMKOfRtr). The build workflow reads this file, generates every clip in narration-scripts.js, keeps the raw files in assets/audio/fe/source, and writes loudness-matched clips (-16 LUFS) to assets/audio/fe. Only clips whose text or settings changed are regenerated.",
+  "voice_id": "kJKMPwrIKzwVkMKOfRtr",
+  "model_id": "eleven_multilingual_v2",
+  "output_format": "mp3_44100_128",
+  "voice_settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.8,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "audio_filter": "highpass=f=70"
+}

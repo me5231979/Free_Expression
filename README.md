@@ -92,10 +92,21 @@ The five-question check covers objectives 2, 4, 5, and 6 (four of five to pass).
 
 ## Narration
 
-`config.js` has `audio: false`, so Listen reads each page with the browser's
-own voice. To record real narration, copy Voyage Online's ElevenLabs workflow
-(`.github/workflows/build-tts.yml`, `scripts/build-tts.py`), point it at
-`window.FE_NARR` and `assets/audio/fe/`, then set `audio: true`.
+ElevenLabs voice `kJKMPwrIKzwVkMKOfRtr`
+(https://elevenlabs.io/voices/kJKMPwrIKzwVkMKOfRtr), model
+`eleven_multilingual_v2`, settings in `.github/tts.json`, levelled to -16 LUFS.
+13 clips, one per page, about 5,400 characters.
+
+1. Add the `ELEVENLABS_API_KEY` repository secret (Settings > Secrets and
+   variables > Actions). The key needs the Text to Speech permission.
+2. Run **Record narration with ElevenLabs** from the Actions tab. It also runs
+   on any push to `main` that changes `narration-scripts.js` or `.github/tts.json`.
+3. It writes `assets/audio/fe/<page>-1.mp3` (raw files in `source/`), commits
+   them, and publishes to `gh-pages`. Only changed clips are re-recorded.
+
+`config.js` has `audio: true`: the Listen button plays the recorded clip, and
+falls back to the browser's own voice for any clip not recorded yet. After
+re-recording, bump `mediaVersion` in `config.js`.
 
 ## Accessibility and test record
 

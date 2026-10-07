@@ -22,10 +22,11 @@ window.FE_CONFIG = {
     creed: 'https://studenthandbook.vanderbilt.edu/the-vanderbilt-community-creed',
     dialogue: 'https://www.vanderbilt.edu/dialogue-vanderbilt/'
   },
-  /* narration: recorded MP3s live in assets/audio/fe/<key>.mp3. Until they
-     are recorded, false makes the Listen button use the browser's own voice. */
-  audio: false,
+  /* narration: ElevenLabs clips in assets/audio/fe/<key>.mp3, recorded by the
+     "Record narration with ElevenLabs" action. Any clip not recorded yet falls
+     back to the browser's own voice. false skips the clips entirely. */
+  audio: true,
   /* where Exit goes; empty closes the tab (inside an LMS) or returns to the start */
   exitUrl: '',
-  mediaVersion: '20261007b'
+  mediaVersion: '20261007c'
 };
