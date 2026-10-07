@@ -184,7 +184,7 @@ if(narr.auto) window.setTimeout(narrPlay, 600);
 var SECTIONS = [
   { k:'why',        no:'01', name:'Why free expression matters', how:'Open three moments and answer the check' },
   { k:'principles', no:'02', name:'The three core principles',   how:'Open each one and answer its check' },
-  { k:'role',       no:'03', name:'Our responsibility as staff', how:'Pick what staff should model' },
+  { k:'role',       no:'03', name:'Our responsibility as staff', how:'Five quick calls, including institutional neutrality' },
   { k:'myths',      no:'04', name:'Myths and realities',         how:'Flip all five cards' },
   { k:'question',   no:'05', name:'Four kinds of expression',    how:'Match all four definitions' },
   { k:'tpm',        no:'06', name:'Time, place, and manner',     how:'Answer all three checks' },
@@ -324,6 +324,7 @@ document.addEventListener('fe:drilldone', function(e){ if(e.detail === 'why'){ w
 var TABSETS = {
   principles: { prog:'principles', label:'The three core principles', tabs:[
     { name:'Free Expression', lead:'The freedom to express, examine, question, and challenge ideas, including ideas that others may find disagreeable or offensive.', list:[
+        'Free expression applies to faculty, students, and staff.',
         'At a university, this principle is especially important to the work of students and faculty. Learning and scholarship require room to ask difficult questions, investigate competing explanations, challenge arguments, develop new ideas, and respond to the ideas of others.',
         'Vanderbilt’s Freedom of Expression policy emphasizes that when people encounter ideas contrary to their own, the response should generally be discussion, debate, and mutually respectful dialogue rather than suppression.'],
       takeH:'Key concept', take:'Protecting expression is not the same as endorsing expression. Maintaining an environment for free expression does not require Vanderbilt, or an individual staff member, to agree with those ideas.',
@@ -481,7 +482,9 @@ var DRILLS = {
   role: { prog:'role', verb:'decided', items:[
     { s:'Staff should model...', opts:['Assumption', 'Curiosity'], a:1, x:'Curiosity over assumption.' },
     { s:'When facilitating dialogue, staff should model...', opts:['Questions', 'Declarations'], a:0, x:'Questions over declarations when facilitating dialogue.' },
-    { s:'Staff should model...', opts:['Confrontation', 'De-escalation'], a:1, x:'De-escalation over confrontation. Staff should also model consistency in applying university rules, and respect for expression while maintaining appropriate boundaries on conduct.' }
+    { s:'Staff should model...', opts:['Confrontation', 'De-escalation'], a:1, x:'De-escalation over confrontation. Staff should also model consistency in applying university rules, and respect for expression while maintaining appropriate boundaries on conduct.' },
+    { s:'Free expression applies to...', opts:['Faculty and students only', 'Faculty, students, and staff'], a:1, x:'Free expression applies to faculty, students, and staff, and staff help ensure an environment of free expression for all three.' },
+    { s:'In your staff role, on political matters, you...', opts:['Abide by institutional neutrality', 'Share a position on behalf of the university'], a:0, x:'Staff abide by institutional neutrality. Vanderbilt’s leadership refrains from commenting on political matters unless they directly affect the university’s core purpose of transformative education and pathbreaking research.' }
   ]},
   types: { opts:['Demonstration', 'Protest', 'Counterprotest', 'Dissent'], prog:'question', verb:'matched', items:[
     { s:'Expression intentionally connected to another campus event or activity.', a:1, x:'A protest.' },
@@ -665,6 +668,7 @@ function buildPrint(){
   var RECAP = [
     ['Why it matters', 'The university’s commitment is not merely to allow disagreement, but to maintain an environment in which disagreement and intellectual exploration can occur.'],
     ['Three principles', 'Free expression, open forums, and civil discourse. Protecting expression is not the same as endorsing expression.'],
+    ['Everyone, and neutrality', 'Free expression applies to faculty, students, and staff. In your staff role, abide by institutional neutrality.'],
     ['Staff should model', 'Curiosity over assumption, questions over declarations when facilitating dialogue, consistency in applying university rules, de-escalation over confrontation, and respect for expression while maintaining appropriate boundaries on conduct.'],
     ['The key question', 'Not “Do I agree with this message?” but whether the expression is consistent with university policy and allows others to continue speaking, listening, teaching, learning, researching, participating, and accessing university activities.'],
     ['The staff role', 'Focus on conduct, not viewpoint. Know the appropriate contact, follow the direction of designated university officials, and avoid unnecessary escalation.']

@@ -24,6 +24,22 @@ are built from the outline's own lists (for example, a time rule offered as
 the answer to a manner question) or from its myths. The only original words
 are headlines, activity instructions, and wrong-answer distractors.
 
+### Added by the program owner (not in the outline)
+
+- **Free expression applies to faculty, students, and staff**, and staff help
+  ensure an environment of free expression for all three (Lesson 2 Free
+  Expression tab, Lesson 3, role drill, print summary).
+- **Staff abide by institutional neutrality in their role** (Lesson 3, role
+  drill, glossary, objective 3, narration). The definition used is
+  Vanderbilt's public wording: leadership refrains from commenting on
+  political matters unless they directly affect the university's core purpose
+  of transformative education and pathbreaking research; reaffirmed by the
+  Board of Trust in October 2024. Sources: news coverage of the Chancellor's
+  statement (for example https://wjla.com/news/nation-world/vanderbilt-university-responds-to-trumps-education-proposal-emphasizing-institutional-neutrality-compact-for-academic-excellence-in-higher-education-nashville-tennessee-admissions-womens-sports-free-speech-student-discipline-affordability)
+  and Times Higher Education
+  (https://www.timeshighereducation.com/talking-leadership/vanderbilt-chancellor-defends-institutional-neutrality-doctrine).
+  Confirm against Vanderbilt's own statement and link it in Resources.
+
 ## Course map
 
 | Page | Key | Outline section | Activity (tracked) |

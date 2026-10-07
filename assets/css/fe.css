@@ -207,3 +207,8 @@
 .fe-kb::after{ z-index:1; background:
   linear-gradient(90deg, rgba(28,28,28,.78) 0%, rgba(28,28,28,.55) 45%, rgba(28,28,28,.15) 80%),
   linear-gradient(180deg, rgba(28,28,28,.25) 0%, rgba(28,28,28,.45) 50%, #1C1C1C 100%); }
+
+/* lesson 3: the two parts of the staff role */
+.fe-two{ display:grid; gap:8px; margin-top:14px; }
+.fe-two p{ border:1px solid var(--bdg); border-left:3px solid var(--eyebrow); background:var(--card2); border-radius:var(--r); padding:10px 14px; color:var(--tx2); font-size:.92rem; line-height:1.5; }
+.fe-two b{ display:block; color:var(--tx); font-weight:600; font-size:.98rem; margin:2px 0 2px; }
