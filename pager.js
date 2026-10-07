@@ -10,29 +10,22 @@ try{
   var main = document.getElementById('main');
   if(!main) throw new Error('no main');
   var PLAN = [
-    { sel:'section.hero',  key:'home',       label:'Welcome',                         mode:'whole' },
-    { sel:'#tradition',    key:'tradition',  label:'Lesson 1: A tradition',           mode:'whole' },
-    { sel:'#commitment',   key:'commitment', label:'Lesson 1: The commitment',        mode:'whole' },
-    { sel:'#expression',   key:'expression', label:'Lesson 2: Free expression',       mode:'whole' },
-    { sel:'#forums',       key:'forums',     label:'Lesson 2: Open forums',           mode:'whole' },
-    { sel:'#civil',        key:'civil',      label:'Lesson 2: Civil discourse',       mode:'whole' },
-    { sel:'#role',         key:'role',       label:'Lesson 3: Our responsibility',    mode:'whole' },
-    { sel:'#myths',        key:'myths',      label:'Lesson 3: Myths',                 mode:'whole' },
-    { sel:'#question',     key:'question',   label:'Lesson 4: The basic principle',   mode:'whole' },
-    { sel:'#tpm',          key:'tpm',        label:'Lesson 4: Time, place, manner',   mode:'whole' },
-    { sel:'#context',      key:'context',    label:'Lesson 4: Why context matters',   mode:'whole' },
-    { sel:'#policies',     key:'policies',   label:'Lesson 4: Related policies',      mode:'whole' },
-    { sel:'#staffrole',    key:'staffrole',  label:'Lesson 5: The staff role',        mode:'whole' },
-    { sel:'#scenarios',    key:'scenarios',  label:'Lesson 5: Check your understanding', mode:'whole' },
-    { sel:'#quiz',         key:'quiz',       label:'Lesson 6: Quick check',           mode:'whole' },
+    { sel:'section.hero',  key:'home',       label:'Welcome',                       mode:'whole' },
+    { sel:'#why',          key:'why',        label:'Lesson 1: Why it matters',      mode:'whole' },
+    { sel:'#principles',   key:'principles', label:'Lesson 2: The core principles', mode:'whole' },
+    { sel:'#role',         key:'role',       label:'Lesson 3: Our responsibility',  mode:'whole' },
+    { sel:'#myths',        key:'myths',      label:'Lesson 3: Myths',               mode:'whole' },
+    { sel:'#question',     key:'question',   label:'Lesson 4: The basic principle', mode:'whole' },
+    { sel:'#tpm',          key:'tpm',        label:'Lesson 4: Time, place, manner', mode:'whole' },
+    { sel:'#context',      key:'context',    label:'Lesson 4: Why context matters', mode:'whole' },
+    { sel:'#staffrole',    key:'staffrole',  label:'Lesson 5: The staff role',      mode:'whole' },
+    { sel:'#quiz',         key:'quiz',       label:'Lesson 6: Quick check',         mode:'whole' },
     { sel:'#practice',     key:'practice',   label:'Lesson 6: Principle to practice', mode:'whole' },
-    { sel:'#learn',        key:'learn',      label:'Resources',                       mode:'whole', extras:['footer'] }
+    { sel:'#learn',        key:'learn',      label:'Resources',                     mode:'whole', extras:['footer'] }
   ];
-  /* pages whose activity is tracked; the page key doubles as the progress key,
-     except where a page tracks under another name (commitment, question) */
+  /* pages whose activity is tracked; the page key is the progress key */
   var TRACKED = [
-    ['tradition'], ['commitment'], ['expression'], ['forums'], ['civil'], ['role'], ['myths'], ['question'],
-    ['tpm'], ['context'], ['policies'], ['staffrole'], ['scenarios'], ['quiz'], ['practice']
+    ['why'], ['principles'], ['role'], ['myths'], ['question'], ['tpm'], ['context'], ['staffrole'], ['quiz'], ['practice']
   ];
   var pages = [], secFirst = {};
   var topSpan = document.getElementById('top');

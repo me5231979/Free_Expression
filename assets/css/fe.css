@@ -26,20 +26,6 @@
 .fe-reflect textarea:focus{ outline:2px solid var(--focus); outline-offset:1px; border-color:var(--focus); }
 .fe-row{ display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin-top:12px; }
 .fe-saved{ color:var(--tx2); font-size:.9rem; }
-.fe-practice{ list-style:none; padding:0; margin:10px 0 0; display:grid; grid-template-columns:1fr 1fr; gap:8px; }
-.fe-practice li{ border:1px solid var(--bd); border-radius:var(--r); padding:10px 12px; font-size:.92rem; color:var(--tx); background:var(--card); line-height:1.35; }
-.fe-practice a{ color:var(--link); text-decoration:underline; text-underline-offset:3px; }
-@media (max-width:480px){ .fe-practice{ grid-template-columns:1fr; } }
-
-/* ── open forums: toggle chips ── */
-.fe-chips{ display:flex; flex-wrap:wrap; gap:8px; margin-top:4px; }
-.fe-chips button{ display:inline-flex; align-items:center; gap:10px; min-height:44px; border:1px solid var(--field-bd); background:var(--card); color:var(--tx); border-radius:999px; padding:8px 16px 8px 10px; font:inherit; font-size:.92rem; cursor:pointer; text-align:left; transition:border-color .2s ease, background .2s ease; }
-.fe-chips button:hover{ border-color:var(--bdg); }
-.fe-chips .cb{ width:22px; height:22px; flex:0 0 22px; border:2px solid var(--eyebrow); border-radius:50%; display:grid; place-items:center; color:transparent; }
-.fe-chips .cb svg{ width:12px; height:12px; }
-.fe-chips button[aria-pressed="true"]{ border-color:var(--eyebrow); background:var(--card2); }
-.fe-chips button[aria-pressed="true"] .cb{ background:var(--eyebrow); color:var(--vu-black); }
-
 /* ── myths: call it, then flip ── */
 .fe-mythhead{ display:flex; align-items:end; justify-content:space-between; gap:8px 24px; flex-wrap:wrap; margin-bottom:6px; }
 .fe-myths{ display:grid; grid-template-columns:repeat(5, minmax(0,1fr)); gap:12px; margin-top:6px; }
@@ -104,13 +90,6 @@
 .fe-both b{ align-self:center; font-family:var(--serif-i); font-style:italic; font-weight:400; color:var(--eyebrow); font-size:1.4rem; }
 @media (max-width:520px){ .fe-both{ grid-template-columns:1fr; text-align:center; } .fe-both span{ justify-content:center; } }
 
-/* ── policies ── */
-.fe-pol{ list-style:none; padding:0; margin:18px 0 0; display:grid; gap:8px; }
-.fe-pol a, .fe-res a{ display:block; border:1px solid var(--bd); background:var(--card); border-radius:var(--r); padding:12px 14px; text-decoration:none; color:var(--tx); transition:border-color .2s ease; }
-.fe-pol a:hover, .fe-res a:hover{ border-color:var(--eyebrow); }
-.fe-pol b, .fe-res b{ display:block; font-weight:600; color:var(--link); text-decoration:underline; text-underline-offset:3px; text-decoration-thickness:1px; }
-.fe-pol span, .fe-res span{ display:block; margin-top:4px; color:var(--tx2); font-size:.88rem; line-height:1.45; }
-
 /* ── the staff role ── */
 .fe-steps{ list-style:none; counter-reset:s; padding:0; margin:16px 0 0; display:grid; gap:6px; }
 .fe-steps li{ counter-increment:s; display:grid; grid-template-columns:30px 1fr; gap:10px; align-items:baseline; color:var(--tx); font-size:.97rem; line-height:1.45; }
@@ -128,6 +107,26 @@
 .fe-consider button[aria-checked="true"] b{ font-weight:600; }
 .v-print{ margin-top:14px; }
 
+/* ── resource cards ── */
+.fe-res a{ display:block; border:1px solid var(--bd); background:var(--card); border-radius:var(--r); padding:12px 14px; text-decoration:none; color:var(--tx); transition:border-color .2s ease; }
+.fe-res a:hover{ border-color:var(--eyebrow); }
+.fe-res b{ display:block; font-weight:600; color:var(--link); text-decoration:underline; text-underline-offset:3px; text-decoration-thickness:1px; }
+.fe-res span{ display:block; margin-top:4px; color:var(--tx2); font-size:.88rem; line-height:1.45; }
+.fe-res .fe-res-h2{ margin-top:clamp(20px,3vh,32px); }
+.fe-res .fe-close.sm{ margin:0 auto 12px; text-align:center; }
+
+/* ── lesson 1 moments: wider year column ── */
+#momentList button{ grid-template-columns:64px 1fr; }
+#momentList button i{ font-size:1.2rem; }
+
+/* ── tab panels: long lists in two columns, the optional reflection ── */
+.fe-list.two{ grid-template-columns:1fr 1fr; column-gap:22px; }
+@media (max-width:640px){ .fe-list.two{ grid-template-columns:1fr; } }
+.fe-listh{ margin-top:12px; }
+.fe-mini{ margin-top:14px; padding:14px 16px; }
+.fe-mini .fe-q{ font-size:1.05rem; margin:6px 0 8px; }
+.fe-mini textarea{ min-height:64px; }
+
 /* ── the end: closing, resources, glossary ── */
 .fe-close{ font-family:var(--serif); font-size:clamp(1.2rem,.9vw + 1rem,1.6rem); line-height:1.35; color:var(--tx); max-width:46ch; margin:14px auto 0; }
 .fe-close.sm{ font-family:var(--sans); font-size:1rem; color:var(--tx2); line-height:1.6; max-width:62ch; }
@@ -141,14 +140,16 @@
 .fe-gloss dd{ margin:0; color:var(--tx2); font-size:.93rem; line-height:1.5; }
 @media (max-width:520px){ .fe-gloss dl{ grid-template-columns:1fr; } .fe-gloss dd{ margin-bottom:6px; } }
 
-/* ── the timeline, with five moments ── */
-.fe-tl .tl-nodes{ grid-template-columns:repeat(5, minmax(56px,1fr)); }
-.fe-tl .tl-line{ left:10%; right:10%; }
-.fe-tl .tl-card{ min-height:190px; }
-
 @media (prefers-reduced-motion: reduce){
   .fe-myth-in{ transition:none; }
   .fe-myth.flipped .fe-myth-in{ transform:none; }
   .fe-myth.flipped .fe-myth-back{ transform:none; }
-  .fe-chips button, .fe-pol a, .fe-res a{ transition:none; }
+  .fe-res a{ transition:none; }
+}
+
+/* narrow screens: tab labels wrap instead of pushing the page wide */
+@media (max-width:560px){
+  .fe-tabs button{ font-size:.82rem; letter-spacing:.06em; padding:6px 4px; gap:6px; text-align:center; flex-direction:column; min-width:0; }
+  .fe-tabs button b{ overflow-wrap:anywhere; }
+  .fe-tab-ok{ width:12px; height:12px; }
 }

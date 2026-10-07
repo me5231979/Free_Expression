@@ -20,14 +20,12 @@ window.FE_CONFIG = {
     installations: 'https://studenthandbook.vanderbilt.edu/node/954',
     principles: 'https://www.vanderbilt.edu/principles/statement-of-principles/',
     creed: 'https://studenthandbook.vanderbilt.edu/the-vanderbilt-community-creed',
-    dialogue: 'https://www.vanderbilt.edu/dialogue-vanderbilt/',
-    freeExpression: 'https://www.vanderbilt.edu/free-expression/',
-    conversations: 'https://news.vanderbilt.edu/2026/01/15/vanderbilt-launches-250-conversations-on-america-to-mark-nations-250th-anniversary-through-civil-discourse/'
+    dialogue: 'https://www.vanderbilt.edu/dialogue-vanderbilt/'
   },
   /* narration: recorded MP3s live in assets/audio/fe/<key>.mp3. Until they
      are recorded, false makes the Listen button use the browser's own voice. */
   audio: false,
   /* where Exit goes; empty closes the tab (inside an LMS) or returns to the start */
   exitUrl: '',
-  mediaVersion: '20261007a'
+  mediaVersion: '20261007b'
 };
