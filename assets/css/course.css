@@ -32,7 +32,7 @@
   --sans:'Inter',Arial,system-ui,sans-serif;
   --cond:'Antonio','Arial Narrow',Impact,sans-serif;
 }
-/* theme scopes — every component reads these vars, so each section theme recolors everything */
+/* theme scopes: every component reads these vars, so each section theme recolors everything */
 .th-dark{
   background:var(--vu-black); color:#FFFFFF;
   --tx:#FFFFFF; --tx2:rgba(255,255,255,.74); --tx3:rgba(255,255,255,.64);
@@ -78,7 +78,7 @@ button{ font:inherit; color:inherit; } input,select,textarea{ font:inherit; }
 .eyebrow .tick{ width:26px; height:2px; background:var(--vu-gold); }
 .you-are{ display:block; font-family:var(--cond); font-weight:700; font-size:.75rem; letter-spacing:.05em; text-transform:uppercase; color:var(--tx3); margin-bottom:14px; }
 
-/* metallic headline — white words, gold italic emphasis (hero H1, closing-CTA H2) */
+/* metallic headline: white words, gold italic emphasis (hero H1, closing-CTA H2) */
 .metal{ color:var(--vu-white); }
 .metal em{ color:var(--vu-gold); font-style:italic; }
 @supports ((-webkit-background-clip:text) or (background-clip:text)){
@@ -99,7 +99,7 @@ nav.links a::after{ content:''; position:absolute; left:12px; right:12px; bottom
   transform:scaleX(0); transform-origin:left; transition:transform .2s var(--ease); }
 nav.links a:hover::after,nav.links a:focus-visible::after{ transform:scaleX(1); }
 nav.links .nav-cta{ margin-left:clamp(8px,1vw,20px); } nav.links .nav-cta::after{ display:none; }
-nav.links a.nav-cta{ color:#1C1C1C; min-height:50px; padding:13px clamp(20px,1.8vw,30px); font-size:.9rem; letter-spacing:0; } /* black on gold — AA 8:1; must beat the white nav-link rule */
+nav.links a.nav-cta{ color:#1C1C1C; min-height:50px; padding:13px clamp(20px,1.8vw,30px); font-size:.9rem; letter-spacing:0; } /* black on gold: AA 8:1; must beat the white nav-link rule */
 .menu-btn{ display:none; background:transparent; border:1px solid rgba(255,255,255,.25); color:#fff;
   width:46px; height:46px; border-radius:var(--r); cursor:pointer; place-items:center; }
 .menu-btn .b{ display:block; width:18px; height:2px; background:currentColor; transition:transform .3s var(--ease),opacity .2s; }
@@ -262,7 +262,7 @@ section + section{ border-top:1px solid transparent; }
 .module-head p{ color:var(--tx2); max-width:66ch; margin-top:12px; }
 .module-head .lframe{ margin-top:16px; }
 
-/* concept block — the mental model before every activity */
+/* concept block: the mental model before every activity */
 .concept{ margin:0 0 26px; padding:2px 0 2px 20px; border-left:3px solid var(--vu-gold); max-width:780px; }
 .concept .c-label{ display:block; font-family:var(--cond); font-weight:700; font-size:.72rem; letter-spacing:.07em; text-transform:uppercase; color:var(--eyebrow); margin-bottom:8px; }
 .concept p{ color:var(--tx2); font-size:.9575rem; line-height:1.75; max-width:68ch; }
@@ -270,7 +270,7 @@ section + section{ border-top:1px solid transparent; }
 .concept p b{ color:var(--tx); font-weight:600; }
 .concept p em{ font-family:var(--serif-i); font-style:italic; }
 
-/* bridge — one connective sentence handing a section to the next */
+/* bridge: one connective sentence handing a section to the next */
 .bridge{ display:flex; align-items:baseline; flex-wrap:wrap; gap:10px 18px; margin-top:clamp(44px,6vw,64px); padding-top:24px; border-top:1px solid var(--bd); }
 .bridge.mid{ margin-top:32px; padding-top:20px; }
 .bridge .b-label{ display:inline-flex; align-items:center; gap:10px; font-family:var(--cond); font-weight:700; font-size:.75rem; letter-spacing:.08em; text-transform:uppercase; color:var(--eyebrow); }
@@ -278,7 +278,7 @@ section + section{ border-top:1px solid transparent; }
 .bridge p{ font-family:var(--serif); font-size:clamp(1.05rem,2.2vw,1.3rem); line-height:1.45; color:var(--tx); max-width:none; }
 .bridge p em{ font-family:var(--serif-i); font-style:italic; color:var(--strong); }
 
-/* evidence — a real citation, named and linked, grounding the module */
+/* evidence: a real citation, named and linked, grounding the module */
 .evidence{ margin-top:24px; border:1px solid var(--bd); border-left:3px solid var(--vu-gold); border-radius:var(--r); background:var(--card); padding:20px 22px; max-width:820px; }
 .evidence .e-label{ display:block; font-family:var(--cond); font-weight:700; font-size:.72rem; letter-spacing:.07em; text-transform:uppercase; color:var(--eyebrow); margin-bottom:10px; }
 .evidence p{ color:var(--tx2); font-size:.9375rem; line-height:1.75; max-width:none; }
@@ -287,7 +287,7 @@ section + section{ border-top:1px solid transparent; }
 .evidence p em{ font-family:var(--serif-i); font-style:italic; }
 .evidence .e-src{ display:block; margin-top:12px; padding-top:10px; border-top:1px solid var(--bd); font-size:.83rem; color:var(--tx3); }
 
-/* ═══════════════════ LEARN — cards ═══════════════════ */
+/* ═══════════════════ LEARN: cards ═══════════════════ */
 .flip-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
 .flip-grid.five{ grid-template-columns:repeat(5,1fr); }
 .fcard button{ width:100%; height:100%; border:1px solid var(--bd); border-radius:var(--r); background:var(--card);
@@ -396,7 +396,7 @@ details.deeper .d-body{ padding:0 20px 20px; color:var(--tx2); font-size:.9375re
 details.deeper .d-body p{ margin-top:10px; }
 details.deeper .d-body b{ color:var(--tx); font-weight:600; }
 
-/* YouTube facades — always a black card */
+/* YouTube facades: always a black card */
 .yt{ position:relative; aspect-ratio:16/9; border-radius:var(--r); overflow:hidden; border:1px solid rgba(207,174,112,.45); max-width:760px; background:#1C1C1C; }
 .yt iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; }
 .yt-btn{ position:absolute; inset:0; width:100%; height:100%; background:none; border:0; cursor:pointer;
@@ -411,7 +411,7 @@ details.deeper .d-body b{ color:var(--tx); font-weight:600; }
 .yt-fallback a,.pol a,.wb-practice p a,.honest a,.evidence a,.rstep a,.concept p a,details.deeper .d-body a{ color:var(--link); border-bottom:1px solid var(--bdg); }
 .yt-fallback a:hover,.evidence a:hover,.rstep a:hover,.concept p a:hover,details.deeper .d-body a:hover{ color:var(--strong); }
 </style>
-/* ═══════════════════ PLAYGROUND — TABS + FORMS ═══════════════════ */
+/* ═══════════════════ PLAYGROUND: TABS + FORMS ═══════════════════ */
 .ptabs{ display:flex; gap:8px; flex-wrap:wrap; margin-bottom:24px; border-bottom:1px solid var(--bd); padding-bottom:14px; }
 .ptab{ border:1px solid var(--bd); background:transparent; color:var(--tx2); cursor:pointer;
   font-weight:500; font-size:.9rem; min-height:48px; padding:11px 20px; border-radius:var(--r);
