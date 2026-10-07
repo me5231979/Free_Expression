@@ -661,7 +661,7 @@ function buildPrint(){
   var today = new Date().toLocaleDateString('en-US', { year:'numeric', month:'long', day:'numeric' });
   var nm = ''; try{ var q = new URLSearchParams(location.search); nm = q.get('name') || ''; }catch(e){}
   var E = C.escalation || {}, L = C.links || {};
-  var html = '<header class="ps-head"><img src="./assets/img/vu-lockup-black.png" alt="Vanderbilt University" width="166" height="43" /><div><span class="ps-k">Free Expression at Vanderbilt</span><h1>Room to <em>disagree</em>.</h1><p>' + (nm ? esc(nm) + ' &middot; ' : '') + esc(today) + '</p></div></header>';
+  var html = '<header class="ps-head"><img src="./assets/img/vu-lockup-black.png" alt="Vanderbilt University" width="166" height="43" /><div><span class="ps-k">Free Expression at Vanderbilt</span><h1>Freedom of <em>Expression</em>.</h1><p>' + (nm ? esc(nm) + ' &middot; ' : '') + esc(today) + '</p></div></header>';
   var RECAP = [
     ['Why it matters', 'The university’s commitment is not merely to allow disagreement, but to maintain an environment in which disagreement and intellectual exploration can occur.'],
     ['Three principles', 'Free expression, open forums, and civil discourse. Protecting expression is not the same as endorsing expression.'],
