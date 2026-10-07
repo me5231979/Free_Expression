@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Free Expression at Vanderbilt · People, Culture and Belonging</title>
+<meta name="description" content="Free Expression at Vanderbilt: a self-paced staff training on free expression, open forums, civil discourse, and time, place, and manner. Six short lessons, about thirty minutes." />
+<meta name="theme-color" content="#1C1C1C" />
+<meta name="robots" content="noindex" />
+<link rel="icon" href="./assets/img/favicon.svg" type="image/svg+xml" />
+<link rel="alternate icon" href="./assets/img/favicon-96.png" />
+<link rel="preload" href="./assets/fonts/libre-caslon-display-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="./assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+
+<!--
+  ══════════════════════════════════════════════════════════════════════════
+  FREE EXPRESSION AT VANDERBILT · staff training, self-paced
+  Six lessons, about thirty minutes, one idea per page. Built on the
+  Vanderbilt Voyage Online engine (me5231979/Voyage_Online): the pager
+  (pager.js), the narration layer (narration-scripts.js, with a
+  speech-synthesis voice until clips are recorded), and the Vanderbilt
+  brand (assets/css/course.css, foundation.css, voyage.css), plus this
+  course's components in assets/css/fe.css.
+  Content: "Free Expression at Vanderbilt, Draft Outline" (PCB), kept
+  verbatim where it carries policy.
+  Progress: localStorage fe1-* in this browser only. Nothing is sent
+  anywhere. Links the program owner should confirm live in config.js.
+  No em or en dashes anywhere in this file.
+-->
+<script>document.documentElement.classList.add('js','paged');</script>
+<link rel="stylesheet" href="./assets/css/course.css?v=20261007a" />
+<link rel="stylesheet" href="./assets/css/foundation.css?v=20261007a" />
+<link rel="stylesheet" href="./assets/css/voyage.css?v=20261007a" />
+<link rel="stylesheet" href="./assets/css/nav.css?v=20261007a" />
+<link rel="stylesheet" href="./assets/css/fe.css?v=20261007a" />
+</head>
+<body>
+<a href="#main" class="skip">Skip to content</a>
+
+<header class="gnav" id="nav">
+  <a class="gnav__brand" href="./#p/home/1" aria-label="Free Expression at Vanderbilt, start of the course">
+    <img src="./assets/img/vu-lockup-white.png" alt="Vanderbilt University" width="166" height="43" decoding="async" />
+  </a>
+  <div class="gnav__right">
+    <nav class="gnav__links" id="gnavLinks" aria-label="Free Expression at Vanderbilt">
+      <a href="./" aria-current="page">Free Expression</a>
+      <a href="#p/expression/1">The principles</a>
+      <a href="#p/tpm/1">Time, place, manner</a>
+      <a href="#p/staffrole/1">Your role</a>
+      <a class="gnav__btn" id="navPcb" href="mailto:pcb@vanderbilt.edu">Contact PCB</a>
+    </nav>
+    <div class="gnav__extra">
+      <button type="button" class="prog-btn" id="progBtn" aria-expanded="false" aria-controls="progPanel"><span class="pw">Progress</span> <b id="progCount">0/15</b></button>
+    </div>
+    <button type="button" class="gnav__burger" aria-label="Menu" aria-expanded="false" aria-controls="gnavLinks"><span></span><span></span><span></span></button>
+  </div>
+  <span class="gnav__line" aria-hidden="true"><span class="prog-fill" id="progFill"></span></span>
+</header>
+
+<div class="prog-panel" id="progPanel" role="region" aria-label="Your progress" hidden>
+  <div class="pp-h">Your progress</div>
+  <p class="prog-sum" id="progSum">Each activity you finish is counted here.</p>
+  <ol class="prog-list" id="progList"></ol>
+  <p class="prog-fine">Progress is saved in this browser only. Nothing is sent anywhere. Reset it anytime in the footer.</p>
+  <p class="prog-fine prog-warn" id="progStorageNote" hidden>Heads up: your browser is blocking saved progress (this happens in private browsing). Marks work during this visit but reset when you close the tab.</p>
+</div>
+<p class="sr" id="progStatus" role="status" aria-live="polite"></p>
+
+
+<main id="main"><span id="top"></span>
+
+<!-- ═══ WELCOME ═══ -->
+<section class="hero v-hero th-dark" aria-label="Welcome">
+  <div class="v-hero-bg" aria-hidden="true"><img src="./assets/img/course/campus-aerial.jpg" alt="" width="1680" height="507" /></div>
+  <div class="wrap v-hero-in">
+    <span class="v-kicker">Free Expression at Vanderbilt &middot; Staff training</span>
+    <h1 class="v-display">Room to <em>disagree</em>.</h1>
+    <p class="v-hello" id="heroHello">Free expression, open forums, and civil discourse, and the part staff play in keeping them alive.</p>
+    <div class="v-hero-cta">
+      <a class="btn btn-gold" href="#p/tradition/1">Begin<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <ul class="v-meta" aria-label="Course at a glance"><li>6 lessons</li><li>About 30 minutes</li><li>Narrated</li></ul>
+    </div>
+    <details class="v-goals">
+      <summary>What you will be able to do</summary>
+      <ol>
+        <li><b>Explain</b> why free expression is central to Vanderbilt&rsquo;s academic mission.</li>
+        <li><b>Distinguish</b> among free expression, open forums, and civil discourse.</li>
+        <li><b>Identify</b> ways staff can foster constructive dialogue and intellectual openness.</li>
+        <li><b>Understand</b> how time, place, and manner rules allow expression while protecting the rights of others and the university&rsquo;s ability to carry out its mission.</li>
+        <li><b>Recognize</b> the basic expectations governing demonstrations, protests, counterprotests, and dissent at Vanderbilt.</li>
+        <li><b>Apply</b> these principles to situations staff may encounter.</li>
+      </ol>
+    </details>
+  </div>
+</section>
+
+<!-- ═══ LESSON 1 · A TRADITION ═══ -->
+<section id="tradition" class="th-dark v-sec" aria-label="Lesson 1: A tradition of open forums">
+  <div class="wrap">
+    <div class="v-rail" data-lesson="1"><span>Lesson 1 of 6 &middot; Why free expression matters here</span></div>
+    <div class="v-stage wide-act">
+      <div class="v-copy">
+        <h2 class="v-h">An old habit of open <em>debate</em>.</h2>
+        <p class="v-why">Free expression here is part of the educational mission, not only a policy or a compliance issue.</p>
+        <p class="fe-lead">Vanderbilt has a long history of creating and sustaining environments where ideas can be debated constructively and differences can be bridged.</p>
+      </div>
+      <div class="v-act">
+        <p class="v-task" data-task="tradition">Visit every moment</p>
+        <div class="v-tl fe-tl" id="tl"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ LESSON 1 · THE COMMITMENT ═══ -->
+<section id="commitment" class="th-dark v-sec" aria-label="Lesson 1: The commitment, and three principles">
+  <div class="wrap">
+    <div class="v-rail" data-lesson="1"><span>Lesson 1 of 6 &middot; The commitment</span></div>
+    <div class="v-stage">
+      <div class="v-copy">
+        <h2 class="v-h">Keep the conditions for <em>inquiry</em>.</h2>
+        <blockquote class="fe-quote">The university&rsquo;s commitment is not merely to allow disagreement, but to maintain an environment in which disagreement and intellectual exploration can occur.</blockquote>
+        <details class="v-more">
+          <summary>What this asks of staff</summary>
+          <p class="fe-small">For staff, this commitment creates an important institutional responsibility: helping preserve the conditions in which students and faculty can pursue those activities, even when the ideas being expressed are controversial, unpopular, or contested.</p>
+          <p class="fe-small">Free expression, open inquiry, and civil discourse are therefore not separate commitments. Together, they describe both the kind of intellectual community Vanderbilt seeks to foster and the shared responsibility for sustaining it.</p>
+        </details>
+      </div>
+      <div class="v-act">
+        <p class="v-label">Vanderbilt&rsquo;s core principles for this training</p>
+        <p class="v-task" data-task="commitment">Open all three principles</p>
+        <div class="v-focus" id="principleList">
+          <button type="button" aria-expanded="false"><i aria-hidden="true">1</i><b>Free Expression</b><span>The freedom to express, examine, question, and challenge ideas, including ideas that others may find disagreeable or offensive.</span></button>
+          <button type="button" aria-expanded="false"><i aria-hidden="true">2</i><b>Open Forums</b><span>Spaces and opportunities in which different ideas and perspectives can be presented, questioned, debated, and tested.</span></button>
+          <button type="button" aria-expanded="false"><i aria-hidden="true">3</i><b>Civil Discourse</b><span>Effective, respectful dialogue across difference.</span></button>
+        </div>
+        <p class="fe-hint">Lesson 2 takes each one in turn.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ LESSON 2 · FREE EXPRESSION ═══ -->
+<section id="expression" class="th-dark v-sec" aria-label="Lesson 2: Free expression">
+  <div class="wrap">
+    <div class="v-rail" data-lesson="2"><span>Lesson 2 of 6 &middot; Free expression</span></div>
+    <div class="v-stage">
+      <div class="v-copy">
+        <p class="v-label">Principle 1 of 3</p>
+        <h2 class="v-h">Protect is not <em>endorse</em>.</h2>
+        <p class="v-why">Protecting expression is not the same as endorsing expression.</p>
+        <p class="fe-lead">Students and faculty will encounter ideas with which they strongly disagree. Maintaining an environment for free expression does not require Vanderbilt, or an individual staff member, to agree with those ideas.</p>
+        <details class="v-more">
+          <summary>The working definition</summary>
+          <ul class="fe-list">
+            <li>The freedom to express, examine, question, and challenge ideas, including ideas that others may find disagreeable or offensive.</li>
+            <li>At a university, this principle is especially important to the work of students and faculty. Learning and scholarship require room to ask difficult questions, investigate competing explanations, challenge arguments, develop new ideas, and respond to the ideas of others.</li>
+            <li>Vanderbilt&rsquo;s Freedom of Expression policy emphasizes that when people encounter ideas contrary to their own, the response should generally be discussion, debate, and mutually respectful dialogue rather than suppression.</li>
+          </ul>
+        </details>
+      </div>
+      <div class="v-act">
+        <p class="v-task" data-task="expression">Protecting, or endorsing? Four moments</p>
+        <div class="drill v-deck" id="expressionDrill" data-drill="expression"></div>
+        <p class="drill-status" id="expressionStatus" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ LESSON 2 · OPEN FORUMS ═══ -->
+<section id="forums" class="th-dark v-sec" aria-label="Lesson 2: Open forums">
+  <div class="wrap">
+    <div class="v-rail" data-lesson="2"><span>Lesson 2 of 6 &middot; Open forums</span></div>
+    <div class="v-stage">
+      <div class="v-copy">
+        <p class="v-label">Principle 2 of 3</p>
+        <h2 class="v-h">Ideas need a <em>room</em>.</h2>
+        <p class="v-why">Spaces and opportunities in which different ideas and perspectives can be presented, questioned, debated, and tested.</p>
+        <p class="v-task" data-task="forums">Tap the forums you have seen or supported, then reflect</p>
+        <div class="fe-chips" id="forumChips" role="group" aria-label="Open forums can include"></div>
+        <p class="fe-hint" id="forumCount" aria-live="polite"></p>
+      </div>
+      <div class="v-act">
+        <div class="fe-card">
+          <span class="v-label">Vanderbilt in practice</span>
+          <ul class="fe-practice">
+            <li><a class="lk-dialogue" href="https://www.vanderbilt.edu/dialogue-vanderbilt/" target="_blank" rel="noopener">Dialogue Vanderbilt</a></li>
+            <li><a class="lk-conversations" href="https://news.vanderbilt.edu/2026/01/15/vanderbilt-launches-250-conversations-on-america-to-mark-nations-250th-anniversary-through-civil-discourse/" target="_blank" rel="noopener">250 Conversations on America</a></li>
+            <li>Vanderbilt debates and speaker programs</li>
+            <li>Classroom engagement with differing perspectives</li>
+          </ul>
+        </div>
+        <div class="fe-card fe-reflect">
+          <label class="v-label" for="forumReflect">Reflection</label>
+          <p class="fe-q">Where do we create opportunities for students to encounter different perspectives?</p>
+          <textarea id="forumReflect" rows="3" placeholder="In my area, we..."></textarea>
+          <div class="fe-row"><button type="button" class="btn btn-gold btn-sm" id="forumSave">Save my reflection</button><span class="fe-saved" id="forumSaved" role="status" aria-live="polite"></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ LESSON 2 · CIVIL DISCOURSE ═══ -->
+<section id="civil" class="th-dark v-sec" aria-label="Lesson 2: Civil discourse">
+  <div class="wrap">
+    <div class="v-rail" data-lesson="2"><span>Lesson 2 of 6 &middot; Civil discourse</span></div>
+    <div class="v-stage">
+      <div class="v-copy">
+        <p class="v-label">Principle 3 of 3</p>
+        <h2 class="v-h">Disagree, <em>well</em>.</h2>
+        <p class="v-why">Effective, respectful dialogue across difference. It provides a way to engage disagreement productively.</p>
+        <details class="v-more">
+          <summary>The Community Creed gives it a Vanderbilt vocabulary</summary>
+          <p class="fe-small">Approach intellectual questions with curiosity and humility, be courageous enough to challenge assumptions, remain open to ideas and experiences, and engage others with respect.</p>
+          <p class="fe-small"><a class="lk-creed" href="https://studenthandbook.vanderbilt.edu/the-vanderbilt-community-creed" target="_blank" rel="noopener">Read the Community Creed</a></p>
+        </details>
+      </div>
+      <div class="v-act">
+        <p class="v-task" data-task="civil">Sort eight cards: a habit to practice, or not required?</p>
+        <div class="drill v-deck" id="civilDrill" data-drill="civil"></div>
+        <p class="drill-status" id="civilStatus" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ LESSON 3 · OUR RESPONSIBILITY ═══ -->
+<section id="role" class="th-dark v-sec" aria-label="Lesson 3: Our responsibility as staff">
+  <div class="wrap">
+    <div class="v-rail" data-lesson="3"><span>Lesson 3 of 6 &middot; Our responsibility as staff</span></div>
+    <div class="v-stage">
+      <div class="v-copy">
+        <h2 class="v-h">Not agreement. <em>Conditions</em>.</h2>
+        <p class="v-why">Staff play an essential role in creating and maintaining the conditions in which students&rsquo; learning, teaching, research, inquiry, and exchange of ideas can flourish.</p>
+        <details class="v-more" open>
+          <summary>Our responsibility is to help students and faculty</summary>
+          <ul class="fe-checks">
+            <li>Ask difficult questions.</li>
+            <li>Encounter unfamiliar ideas.</li>
+            <li>Express disagreement.</li>
+            <li>Challenge arguments.</li>
+            <li>Engage one another with dignity and respect.</li>
+            <li>Participate in university programs and activities without disruption.</li>
+            <li>Exercise their own expressive rights while respecting the expressive rights of others.</li>
+          </ul>
+        </details>
+      </div>
+      <div class="v-act">
+        <p class="v-task" data-task="role">Five moments. Which would you model?</p>
+        <div class="drill v-deck" id="roleDrill" data-drill="role"></div>
+        <p class="drill-status" id="roleStatus" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ LESSON 3 · MYTHS ═══ -->
+<section id="myths" class="th-dark v-sec" aria-label="Lesson 3: Myths and misconceptions">
+  <div class="wrap">
+    <div class="v-rail" data-lesson="3"><span>Lesson 3 of 6 &middot; Myths and misconceptions</span></div>
+    <div class="fe-mythhead">
+      <h2 class="v-h">Five myths, five <em>realities</em>.</h2>
+      <p class="v-why">Make your call first. Then flip the card.</p>
+    </div>
+    <p class="v-task" data-task="myths">Call it, then flip all five</p>
+    <div class="fe-myths" id="myths-grid"></div>
+    <p class="drill-status" id="mythsStatus" role="status" aria-live="polite"></p>
+  </div>
+</section>
+
+<!-- ═══ LESSON 4 · THE BASIC PRINCIPLE ═══ -->
+<section id="question" class="th-dark v-sec" aria-label="Lesson 4: The basic principle">
+  <div class="wrap">
+    <div class="v-rail" data-lesson="4"><span>Lesson 4 of 6 &middot; Time, place, and manner</span></div>
+    <div class="v-stage">
+      <div class="v-copy">
+        <h2 class="v-h">Ask the right <em>question</em>.</h2>
+        <p class="v-why">Free expression and reasonable rules about conduct can coexist.</p>
+        <div class="fe-ask">
+          <p class="fe-ask-no"><span class="v-label">The key question is generally not</span><s>&ldquo;Do I agree with this message?&rdquo;</s></p>
+          <p class="fe-ask-yes"><span class="v-label">Instead, ask</span>&ldquo;Is the expression occurring in a way that is consistent with university policy and allows students, faculty, and others to continue speaking, listening, teaching, learning, researching, participating, and accessing university activities?&rdquo;</p>
+        </div>
+      </div>
+      <div class="v-act">
+        <p class="v-task" data-task="question">Vanderbilt distinguishes four kinds. Name each one</p>
+        <div class="drill v-deck fe-four" id="typesDrill" data-drill="types"></div>
+        <p class="drill-status" id="typesStatus" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ LESSON 4 · TIME, PLACE, MANNER ═══ -->
+<section id="tpm" class="th-dark v-sec" aria-label="Lesson 4: Time, place, and manner">
+  <div class="wrap">
+    <div class="v-rail" data-lesson="4"><span>Lesson 4 of 6 &middot; Time, place, and manner</span></div>
+    <div class="fe-tpmhead">
+      <h2 class="v-h">When, where, and <em>how</em>.</h2>
+      <p class="v-why">Expression may be subject to reasonable limits on when, where, and how it occurs. Open each one and answer its question.</p>
+    </div>
+    <p class="v-task" data-task="tpm">Open time, place, and manner</p>
+    <div class="fe-tpm" id="tpmBox"></div>
+    <p class="drill-status" id="tpmStatus" role="status" aria-live="polite"></p>
+  </div>
+</section>
+
+<!-- ═══ LESSON 4 · CONTEXT ═══ -->
+<section id="context" class="th-dark v-sec" aria-label="Lesson 4: Demonstration versus protest">
+  <div class="wrap">
+    <div class="v-rail" data-lesson="4"><span>Lesson 4 of 6 &middot; Why context matters</span></div>
+    <div class="v-stage">
+      <div class="v-copy">
+        <h2 class="v-h">Both rights, at the same <em>time</em>.</h2>
+        <p class="v-why">A protest directed at an ongoing event is different, because the expressive rights of the protesters must coexist with the rights of others to participate in that event.</p>
+        <div class="fe-both" aria-label="The goal is to preserve both">
+          <span>the right to protest</span><b aria-hidden="true">and</b><span>the right of others to speak, listen, participate, and learn</span>
+        </div>
+        <details class="v-more">
+          <summary>Demonstration or protest: the difference</summary>
+          <p class="fe-small">During a demonstration that is independent of another event, audible and symbolic activities such as speeches, chanting, marching, and signs may generally occur consistent with university policies.</p>
+          <p class="fe-small">During protests and counterprotests, silent and symbolic activities, such as picketing, holding signs, turning backs, or covering ears, may occur, while audible activity may be restricted when it would interfere with the targeted event.</p>
+        </details>
+        <details class="v-more">
+          <summary>Planning, and spontaneous expression</summary>
+          <p class="fe-small">Vanderbilt encourages organizers to work with the Vice Provost and Dean of Students or designee in advance so demonstrations and protests can occur as envisioned with minimal complications. When possible, organizers should provide at least 48 hours&rsquo; notice of the planned time, date, and location.</p>
+          <p class="fe-small">Spontaneous expression is also addressed by university policy. Dissent, by its nature, may occur spontaneously without advance university review. Other spontaneous activism may be subject to relocation or termination so that organizers can work through the planning process.</p>
+        </details>
+      </div>
+      <div class="v-act">
+        <p class="v-task" data-task="context">A protest outside, and inside, a speaker event. Generally fine, or crosses the line?</p>
+        <div class="drill v-deck" id="contextDrill" data-drill="context"></div>
+        <p class="drill-status" id="contextStatus" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ LESSON 4 · RELATED POLICIES ═══ -->
+<section id="policies" class="th-dark v-sec" aria-label="Lesson 4: Related Vanderbilt policies">
+  <div class="wrap">
+    <div class="v-rail" data-lesson="4"><span>Lesson 4 of 6 &middot; Related policies</span></div>
+    <div class="v-stage">
+      <div class="v-copy">
+        <h2 class="v-h">Know where to <em>look</em>.</h2>
+        <p class="v-why">Participants do not need to memorize every rule. They should know where to find the authoritative guidance.</p>
+        <ul class="fe-pol">
+          <li><a class="lk-foe" href="https://studenthandbook.vanderbilt.edu/node/882" target="_blank" rel="noopener"><b>Freedom of Expression Policy</b><span>Primary policy governing demonstrations, protests, counterprotests, dissent, planning, participation, duration, relocation or termination, and disorderly conduct.</span></a></li>
+          <li><a class="lk-space" href="https://studenthandbook.vanderbilt.edu/node/954" target="_blank" rel="noopener"><b>Use of University Space Policy</b><span>Governs space reservations and use, event registration, installations, notices, outdoor use, and related requirements.</span></a></li>
+          <li><a class="lk-noise" href="https://studenthandbook.vanderbilt.edu/excessive-noise-amplified-sound" target="_blank" rel="noopener"><b>Excessive Noise and Amplified Sound Policy</b><span>Applies to noise associated with demonstrations, protests, events, and other campus activity.</span></a></li>
+          <li><a class="lk-install" href="https://studenthandbook.vanderbilt.edu/node/954" target="_blank" rel="noopener"><b>Installations Policy / Use of University Space</b><span>Applies to temporary displays, symbolic structures, art pieces, and other physical installations used for expressive purposes.</span></a></li>
+        </ul>
+      </div>
+      <div class="v-act">
+        <p class="v-task" data-task="policies">Which policy would you look up? Four requests</p>
+        <div class="drill v-deck fe-four" id="policiesDrill" data-drill="policies"></div>
+        <p class="drill-status" id="policiesStatus" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ LESSON 5 · THE STAFF ROLE ═══ -->
+<section id="staffrole" class="th-dark v-sec" aria-label="Lesson 5: What is the staff role?">
+  <div class="wrap">
+    <div class="v-rail" data-lesson="5"><span>Lesson 5 of 6 &middot; What is the staff role?</span></div>
+    <div class="v-stage">
+      <div class="v-copy">
+        <h2 class="v-h">Conduct, not <em>viewpoint</em>.</h2>
+        <p class="v-why">Staff do not need to become free-expression policy experts or personally adjudicate protests. When staff encounter expressive activity:</p>
+        <ol class="fe-steps">
+          <li>Focus on conduct, not viewpoint.</li>
+          <li>Do not assume controversy or offense means the expression violates policy.</li>
+          <li>Consider whether others can still enter, hear, participate, learn, work, and move safely through the space.</li>
+          <li>Do not independently attempt to resolve a protest or demonstration outside your role.</li>
+          <li>Know the appropriate university contact or escalation pathway.</li>
+          <li>Follow the direction of designated university officials.</li>
+          <li>Avoid unnecessary escalation.</li>
+        </ol>
+      </div>
+      <div class="v-act">
+        <p class="v-task" data-task="staffrole">What you notice: viewpoint, or conduct?</p>
+        <div class="drill v-deck" id="staffroleDrill" data-drill="staffrole"></div>
+        <p class="drill-status" id="staffroleStatus" role="status" aria-live="polite"></p>
+        <div class="fe-esc" id="escBox">
+          <span class="v-label">Your escalation pathway</span>
+          <p id="escText"><b>To be confirmed.</b> Your area&rsquo;s contact and protocol will be listed here. Until then, ask your manager who to call.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ LESSON 5 · CHECK YOUR UNDERSTANDING ═══ -->
+<section id="scenarios" class="th-dark v-sec" aria-label="Lesson 5: Check your understanding">
+  <div class="wrap">
+    <div class="v-rail" data-lesson="5"><span>Lesson 5 of 6 &middot; Check your understanding</span></div>
+    <div class="v-stage">
+      <div class="v-copy">
+        <h2 class="v-h">Three moments, one <em>event</em>.</h2>
+        <p class="v-why">A controversial speaker is coming to campus. Follow it from the first complaint to the night itself.</p>
+        <ol class="v-three"><li>The speaker</li><li>The protest</li><li>The disruption</li></ol>
+      </div>
+      <div class="v-act">
+        <p class="v-task" data-task="scenarios">Find the best response in each</p>
+        <div class="calls" id="feCalls" data-calls="event"></div>
+        <p class="drill-status" id="scenariosStatus" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ LESSON 6 · QUICK CHECK ═══ -->
+<section id="quiz" class="th-dark v-sec" aria-label="Knowledge check">
+  <div class="wrap narrow">
+    <div class="v-rail" data-lesson="6"><span>Lesson 6 of 6 &middot; Quick check</span></div>
+    <h2 class="v-h center">Five <em>questions</em>.</h2>
+    <p class="v-task center" data-task="quiz">Four of five to pass</p>
+    <div id="quizBox"></div>
+    <p class="drill-status" id="quizStatus" role="status" aria-live="polite">0 of 5 answered.</p>
+    <div class="kq-done" id="quizDone" role="status" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- ═══ LESSON 6 · FROM PRINCIPLE TO PRACTICE ═══ -->
+<section id="practice" class="th-dark v-sec" aria-label="Lesson 6: From principle to practice">
+  <div class="wrap">
+    <div class="v-rail" data-lesson="6"><span>Lesson 6 of 6 &middot; From principle to practice</span></div>
+    <div class="v-stage">
+      <div class="v-copy">
+        <h2 class="v-h">Your one <em>move</em>.</h2>
+        <p class="v-why">Describe one way you can model or strengthen Vanderbilt&rsquo;s commitment to free expression and civil discourse in your role.</p>
+        <p class="v-task" data-task="practice">Pick a question to start from, then write your move</p>
+        <div class="v-commits fe-consider" id="considerList" role="radiogroup" aria-label="Consider"></div>
+      </div>
+      <div class="v-act">
+        <div class="fe-card fe-reflect">
+          <label class="v-label" for="practiceText">My move</label>
+          <p class="fe-q" id="practiceQ">Pick a question on the left to start.</p>
+          <textarea id="practiceText" rows="4" placeholder="In my role, I will..."></textarea>
+          <div class="fe-row"><button type="button" class="btn btn-gold btn-sm" id="practiceSave">Commit to it</button><span class="fe-saved" id="practiceSaved" role="status" aria-live="polite"></span></div>
+        </div>
+        <div class="v-msg">
+          <span class="v-label">Share it with your team</span>
+          <p id="tellText">&ldquo;I just finished Free Expression at Vanderbilt. One thing I will do in my role: [your move]. Could we talk about how our team handles this?&rdquo;</p>
+          <button type="button" class="btn btn-gold btn-sm" id="copyTell" data-copytext="">Copy the message</button>
+        </div>
+        <button type="button" class="btn btn-ghost btn-sm v-print" data-print><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6M6 18H4a1 1 0 0 1-1-1v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6a1 1 0 0 1-1 1h-2"/><rect x="6" y="14" width="12" height="7"/></svg>Print my summary</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ RESOURCES AND CLOSING ═══ -->
+<section id="learn" class="th-dark v-sec v-end" aria-label="Resources and closing">
+  <div class="v-end-bg" aria-hidden="true"><img src="./assets/img/course/campus-aerial.jpg" alt="" width="1680" height="507" loading="lazy" /></div>
+  <div class="wrap">
+    <p class="v-latin">Closing</p>
+    <h2 class="v-display sm">A culture to <em>sustain</em>.</h2>
+    <p class="fe-close">Free expression at Vanderbilt is not simply a policy to know. It is a culture the university community has a responsibility to sustain.</p>
+    <p class="fe-close sm">For staff, that means helping create an environment where students can encounter ideas, ask difficult questions, disagree, listen, test arguments, and develop their own conclusions, while ensuring that others can continue to learn, speak, participate, and access university programs.</p>
+    <div class="v-hero-cta center">
+      <a class="btn btn-gold" data-survey href="#" target="_blank" rel="noopener" hidden>Rate this course</a>
+      <button type="button" class="btn btn-ghost" data-print>Print my summary</button>
+      <button type="button" class="btn btn-ghost" id="exitBtn">Exit the course</button>
+    </div>
+    <div class="fe-res">
+      <h3 class="v-h xs">Vanderbilt <em>resources</em>.</h3>
+      <ul>
+        <li><a class="lk-creed" href="https://studenthandbook.vanderbilt.edu/the-vanderbilt-community-creed" target="_blank" rel="noopener"><b>Community Creed</b><span>A student-developed statement of the values to which the Vanderbilt community aspires: Academic, Neighborly, Courageous, Honest, Open, and Respectful. All undergraduates sign the Creed during orientation.</span></a></li>
+        <li><a class="lk-foe" href="https://studenthandbook.vanderbilt.edu/node/882" target="_blank" rel="noopener"><b>Vanderbilt Freedom of Expression Policy</b><span>Primary guidance on free expression, demonstrations, protests, counterprotests, dissent, and related conduct.</span></a></li>
+        <li><a class="lk-principles" href="https://www.vanderbilt.edu/principles/statement-of-principles/" target="_blank" rel="noopener"><b>Vanderbilt Statement of Principles</b><span>University commitments regarding academic freedom and free expression, open debate and dissent, civility, and respect.</span></a></li>
+        <li><a class="lk-dialogue" href="https://www.vanderbilt.edu/dialogue-vanderbilt/" target="_blank" rel="noopener"><b>Dialogue Vanderbilt</b><span>Vanderbilt&rsquo;s campuswide initiative for strengthening free expression and civil discourse.</span></a></li>
+        <li><a class="lk-space" href="https://studenthandbook.vanderbilt.edu/node/954" target="_blank" rel="noopener"><b>Use of University Space</b><span>Guidance governing campus space, reservations, events, installations, notices, and outdoor use.</span></a></li>
+      </ul>
+    </div>
+    <details class="v-goals fe-gloss">
+      <summary>Plain-language glossary</summary>
+      <dl>
+        <dt>Free expression</dt><dd>The freedom to express, examine, question, and challenge ideas, including ones others find disagreeable or offensive.</dd>
+        <dt>Open forum</dt><dd>Any space or opportunity where different ideas can be presented, questioned, debated, and tested.</dd>
+        <dt>Civil discourse</dt><dd>Effective, respectful dialogue across difference. It does not require agreement.</dd>
+        <dt>Endorse</dt><dd>To agree with or approve of an idea. Protecting someone&rsquo;s expression does not endorse it.</dd>
+        <dt>Demonstration</dt><dd>Expression independent of another campus event or activity.</dd>
+        <dt>Protest</dt><dd>Expression intentionally connected to another campus event or activity.</dd>
+        <dt>Counterprotest</dt><dd>Expression responding to another organizer&rsquo;s activity.</dd>
+        <dt>Dissent</dt><dd>A short, spontaneous, nonviolent verbal or nonverbal reaction to a speaker.</dd>
+        <dt>Counterexpression</dt><dd>Answering speech with more speech: a sign, a question, an alternative event.</dd>
+        <dt>Time, place, and manner</dt><dd>Reasonable rules about when, where, and how expression happens. They do not depend on what the message says.</dd>
+        <dt>Viewpoint</dt><dd>What a person believes or says. Staff respond to conduct, never to viewpoint.</dd>
+        <dt>Conduct</dt><dd>What a person does: blocking a door, drowning out a speaker, damaging property.</dd>
+        <dt>Disruption</dt><dd>Conduct that materially interferes with teaching, events, access, or other authorized university activities.</dd>
+        <dt>Community Creed</dt><dd>The student-developed statement of Vanderbilt values: Academic, Neighborly, Courageous, Honest, Open, Respectful.</dd>
+        <dt>Escalation pathway</dt><dd>The person or office you contact when expressive activity needs a university response.</dd>
+      </dl>
+    </details>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fcenter">
+      <img src="./assets/img/vu-centered-white.png" alt="Vanderbilt University" width="100" height="105" loading="lazy" decoding="async" />
+      <p class="fprogram">Free Expression at Vanderbilt &middot; People, Culture and Belonging</p>
+      <p class="flegal">&copy; <span id="yr">2026</span> Vanderbilt University &middot; People, Culture and Belonging. Progress and your answers are saved in this browser only; nothing is sent anywhere. Accessibility: this course is built to WCAG 2.2 AA. If anything is hard to use, email <a href="mailto:pcb@vanderbilt.edu">pcb@vanderbilt.edu</a>.</p>
+      <button type="button" class="preset" id="progReset">Reset progress<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7M21 3v6h-6"/></svg></button>
+    </div>
+  </div>
+</footer>
+
+<div class="book-bar" id="bookBar" role="navigation" aria-label="Book controls">
+  <div class="bb-left">
+    <span class="bb-sec" id="bbSec" aria-hidden="true">Welcome</span>
+    <button type="button" class="bb-aud" id="bbListen" aria-pressed="false" aria-label="Listen to this page" title="Listen to this page"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M19 5a9 9 0 0 1 0 14"/></svg><span class="wave" aria-hidden="true"><i></i><i></i><i></i></span><span class="bb-aud-t" id="bbListenT">Listen</span></button>
+    <button type="button" class="bb-aud" id="bbAuto" aria-pressed="false" aria-label="Auto-narrate every page" title="Auto-narrate every page"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/><path d="M18 15l3 3-3 3"/></svg><span class="bb-aud-t">Auto</span></button>
+    <button type="button" class="bb-done" id="bbDone" aria-pressed="false" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span class="bb-done-t">Mark done</span></button>
+  </div>
+  <nav class="bb-dots" id="bbDots" aria-label="Course pages"></nav>
+  <div class="bb-ctl">
+    <span class="bb-count" id="bbCount" aria-live="polite">1 / 1</span>
+    <button type="button" class="bb-btn" id="pgPrev" aria-label="Previous page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+    <button type="button" class="bb-btn" id="pgNext" aria-label="Next page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+  </div>
+</div>
+<p class="narr-toast" id="narrToast" role="status" aria-live="polite"></p>
+<div id="printSheet" class="print-sheet" aria-hidden="true"></div>
+
+<div class="oracle-overlay" id="oracleModal" role="dialog" aria-modal="true" aria-labelledby="oracleTitle" hidden>
+  <div class="oracle-modal">
+    <span class="mono">Course complete</span>
+    <h2 id="oracleTitle">You have finished Free Expression at Vanderbilt.</h2>
+    <p id="oracleBody">Every activity is done. Share your one move with your team, keep the policy links close, and know your escalation pathway before you need it.</p>
+    <div class="oracle-actions">
+      <button type="button" class="btn btn-gold" data-print>Print my summary</button>
+      <button type="button" class="btn btn-ghost btn-sm" id="oracleGo">Done</button>
+    </div>
+    <p class="oracle-fine">Your progress stays in this browser.</p>
+  </div>
+</div>
+
+<script src="config.js?v=20261007a"></script>
+<script src="narration-scripts.js?v=20261007a"></script>
+<script src="./assets/js/nav.js?v=20261007a"></script>
+<script src="./assets/js/qrcode.js?v=20261007a"></script>
+<script src="pager.js?v=20261007a"></script>
+<script src="app.js?v=20261007a"></script>
+</body>
+</html>
