@@ -24,6 +24,23 @@ are built from the outline's own lists (for example, a time rule offered as
 the answer to a manner question) or from its myths. The only original words
 are headlines, activity instructions, and wrong-answer distractors.
 
+### Program owner review, 2026-10-26 (applied)
+
+Slide-by-slide edits from *Free Expression Training: Proposed Edits*:
+objective 3 no longer mentions institutional neutrality and objective 5 is
+removed; Lesson 1 shows the staff-responsibility sentence and adds the
+founding and 1967 IMPACT Symposium detail; Lesson 2 says "open forums", expands
+Vanderbilt in practice (Dialogue Vanderbilt, 250 Conversations on America),
+and uses the full Community Creed sentence; Lesson 3 is retitled "Our
+responsibility as staff", opens with the staff-role sentence, drops the "For
+everyone" card and the two added questions, and uses "refrains from publicly
+taking positions"; Lesson 4 adds why Vanderbilt has time, place, and manner
+rules and the "Under Vanderbilt's Freedom of Expression policy:" lead-in;
+the context page is retitled "Why context matters" and its activity is now a
+click-through of the four related policies; the escalation placeholder is
+removed (pathways vary by office; the printout has a blank for your office's
+contact).
+
 ### Added by the program owner (not in the outline)
 
 - **Free expression applies to faculty, students, and staff**, and staff help
@@ -48,12 +65,12 @@ are headlines, activity instructions, and wrong-answer distractors.
 | What you will learn | `objectives` | Training purpose, learning objectives | Objectives mapped to the activity that checks each |
 | Keep the conditions for inquiry | `why` | I | Open three moments (1870s, 1960s, Today), then one check |
 | Three principles, one community | `principles` | II.A to II.C | Three tabs, one check each; optional reflection |
-| Not agreement. Conditions | `role` | III | Staff should model: three pairs |
+| Our responsibility as staff | `role` | III | Staff should model: three pairs |
 | Five myths, five realities | `myths` | IV | Call it, then flip five cards |
 | Ask the right question | `question` | V, basic principle | Match the four definitions |
 | When, where, and how | `tpm` | V, time / place / manner | Three tabs, one check each |
-| Both rights, at the same time | `context` | V, context; planning | May it occur during a protest? (six) |
-| Conduct, not viewpoint | `staffrole` | VI, VII | The three scenarios; escalation box |
+| Why context matters | `context` | V, context; planning; related policies | Open all four related policies |
+| Conduct, not viewpoint | `staffrole` | VI, VII | The three scenarios |
 | Five questions | `quiz` | | Knowledge check, four of five |
 | Your one move | `practice` | VIII | Pick a question, commit to one move |
 | A culture to sustain | `learn` | V policies, IX, closing | Resources, policies, glossary, print, exit |
@@ -72,17 +89,13 @@ checked by an activity. The program owner should approve the wording.
 | 2 | **Distinguish** among free expression, open forums, and civil discourse. | Same | Lesson 2, three checks |
 | 3 | **Identify** behaviors staff can model to foster constructive dialogue and intellectual openness. | "Identify ways staff can foster..." | Lesson 3, staff should model |
 | 4 | **Classify** rules as limits on time, place, or manner, and describe how these limits allow expression while protecting the rights of others and the university's ability to carry out its mission. | "Understand how time, place, and manner rules..." | Lesson 4, three checks |
-| 5 | **Match** demonstrations, protests, counterprotests, and dissent to their definitions, and **determine** which activities may occur during a protest of an ongoing event. | "Recognize the basic expectations governing..." | Lesson 4, definitions; during a protest |
-| 6 | **Select** the response that best reflects Vanderbilt's approach in situations staff may encounter. | "Apply these principles to situations..." | Lesson 5, three scenarios |
-| 7 | **Describe** one way you will model or strengthen Vanderbilt's commitment to free expression and civil discourse in your role. | New; from outline VIII (reflection) | Lesson 6, your one move |
+| 5 | **Select** the response that best reflects Vanderbilt's approach in situations staff may encounter. | "Apply these principles to situations..." | Lesson 5, three scenarios |
+| 6 | **Describe** one way you will model or strengthen Vanderbilt's commitment to free expression and civil discourse in your role. | New; from outline VIII (reflection) | Lesson 6, your one move |
 
-The five-question check covers objectives 2, 4, 5, and 6 (four of five to pass).
+The five-question check covers objectives 2, 4, and 5 (four of five to pass). The four-definitions activity in Lesson 4 stays as practice; its objective was removed at the program owner's request (2026-10-26 review).
 
 ## Before launch: confirm in `config.js` and with the program owner
 
-- **Escalation pathway.** The outline says *[Insert appropriate
-  contact/protocol]*. Until `escalation.name` is set, the staff-role page and
-  the printout show "To be confirmed."
 - **Policy links.** Freedom of Expression and Use of University Space point to
   Student Handbook node URLs found by search; confirm the canonical links.
   The Installations link reuses Use of University Space.

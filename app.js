@@ -184,11 +184,11 @@ if(narr.auto) window.setTimeout(narrPlay, 600);
 var SECTIONS = [
   { k:'why',        no:'01', name:'Why free expression matters', how:'Open three moments and answer the check' },
   { k:'principles', no:'02', name:'The three core principles',   how:'Open each one and answer its check' },
-  { k:'role',       no:'03', name:'Our responsibility as staff', how:'Five quick calls, including institutional neutrality' },
+  { k:'role',       no:'03', name:'Our responsibility as staff', how:'Pick what staff should model' },
   { k:'myths',      no:'04', name:'Myths and realities',         how:'Flip all five cards' },
   { k:'question',   no:'05', name:'Four kinds of expression',    how:'Match all four definitions' },
   { k:'tpm',        no:'06', name:'Time, place, and manner',     how:'Answer all three checks' },
-  { k:'context',    no:'07', name:'Why context matters',         how:'Six calls during a protest' },
+  { k:'context',    no:'07', name:'Why context matters',         how:'Open all four related policies' },
   { k:'staffrole',  no:'08', name:'Check your understanding',    how:'Answer all three scenarios' },
   { k:'quiz',       no:'09', name:'A quick check',               how:'Score 4 of 5' },
   { k:'practice',   no:'10', name:'From principle to practice',  how:'Pick a question and commit to one move' }
@@ -320,6 +320,19 @@ document.addEventListener('fe:drilldone', function(e){ if(e.detail === 'why'){ w
   }); });
 })();
 
+/* ══════════ lesson 4: the four related policies, opened in place ══════════ */
+(function(){
+  var list = $('#policyList'), status = $('#contextStatus'); if(!list) return;
+  var btns = $$('button', list), seen = {};
+  function paint(){ var n = Object.keys(seen).length; if(status) status.textContent = n + ' of ' + btns.length + ' policies opened.' + (n === btns.length ? ' Activity complete.' : ''); if(n === btns.length) progDone('context'); }
+  btns.forEach(function(b, i){ b.addEventListener('click', function(){
+    var o = b.getAttribute('aria-expanded') !== 'true', d = document.getElementById(b.getAttribute('aria-controls'));
+    b.setAttribute('aria-expanded', o ? 'true' : 'false'); if(d) d.hidden = !o;
+    if(o){ seen[i] = 1; paint(); }
+  }); });
+  paint();
+})();
+
 /* ══════════ tabs with one check each: the three principles, and time / place / manner ══════════ */
 var TABSETS = {
   principles: { prog:'principles', label:'The three core principles', tabs:[
@@ -332,19 +345,19 @@ var TABSETS = {
       x:'Vanderbilt’s Freedom of Expression policy emphasizes discussion, debate, and mutually respectful dialogue rather than suppression.' },
     { name:'Open Forums', lead:'Spaces and opportunities in which different ideas and perspectives can be presented, questioned, debated, and tested. Open forums can include:', list:[
         'Classroom conversations', 'Lectures and speaker programs', 'Debates', 'Student organization events', 'Dialogue programs', 'Public forums', 'Peaceful demonstrations and counterexpression', 'Informal conversations across difference'],
-      takeH:'Vanderbilt in practice', take:'Dialogue Vanderbilt, 250 Conversations on America, Vanderbilt debates and speaker programs, and classroom engagement with differing perspectives.',
+      takeH:'Vanderbilt in practice', take:'Dialogue Vanderbilt brings together leaders and innovators across disciplines and Vanderbilt campuses to model civil discourse in action. Through initiatives such as 250 Conversations on America, participants engage in substantive dialogue on pressing issues and model listening, curiosity, evidence-based discussion, and disagreement with nuance and civility.',
       reflect:'Where do we create opportunities for students to encounter different perspectives?',
       q:'Which of these can be an open forum?', opts:['Only lectures and formal debates', 'Only events planned in advance', 'Classroom conversations, peaceful demonstrations, and informal conversations across difference, among others'], a:2,
       x:'Open forums include classroom conversations, lectures and speaker programs, debates, student organization events, dialogue programs, public forums, peaceful demonstrations and counterexpression, and informal conversations across difference.' },
     { name:'Civil Discourse', lead:'Effective, respectful dialogue across difference. It provides a way to engage disagreement productively. Civil discourse does not require agreement, avoiding difficult topics, suppressing strongly held views, pretending differences do not exist, or reaching consensus.', list:[
         'Ask before assuming.', 'Listen to understand before responding.', 'Separate a person from an argument.', 'Ask questions that test ideas rather than attack people.', 'Use evidence and reasoning.', 'Acknowledge uncertainty.', 'Be willing to revise your own assumptions.', 'Make room for disagreement.', 'Remember that another person may have information or insight you do not.'],
       listH:'Habits staff can model',
-      takeH:'The Community Creed', take:'Approach intellectual questions with curiosity and humility, be courageous enough to challenge assumptions, remain open to ideas and experiences, and engage others with respect.',
+      takeH:'The Community Creed', take:'The Community Creed gives this concept a distinctly Vanderbilt vocabulary: approach intellectual questions with curiosity and humility, be courageous enough to challenge assumptions, remain open to ideas and experiences, and engage others with respect.',
       q:'Which of these does civil discourse require?', opts:['Reaching consensus', 'Avoiding difficult topics', 'None of these; it is a way to engage disagreement productively'], a:2,
       x:'Civil discourse does not require agreement, avoiding difficult topics, suppressing strongly held views, pretending differences do not exist, or reaching consensus.' }
   ]},
   tpm: { prog:'tpm', label:'Time, place, and manner', tabs:[
-    { name:'Time', lead:'Expression may be subject to reasonable limits on when and for how long it occurs.', list:[
+    { name:'Time', lead:'Expression may be subject to reasonable limits on when and for how long it occurs.', listH:'Under Vanderbilt’s Freedom of Expression policy:', list:[
         'Organizers should, when possible, submit plans for demonstrations, protests, and counterprotests at least 48 hours in advance.',
         'Expression is recommended to last no longer than three hours and may not exceed 7.5 hours.',
         'Demonstrations, protests, and counterprotests may not occur at times requiring participants to sleep or gather overnight.',
@@ -482,9 +495,7 @@ var DRILLS = {
   role: { prog:'role', verb:'decided', items:[
     { s:'Staff should model...', opts:['Assumption', 'Curiosity'], a:1, x:'Curiosity over assumption.' },
     { s:'When facilitating dialogue, staff should model...', opts:['Questions', 'Declarations'], a:0, x:'Questions over declarations when facilitating dialogue.' },
-    { s:'Staff should model...', opts:['Confrontation', 'De-escalation'], a:1, x:'De-escalation over confrontation. Staff should also model consistency in applying university rules, and respect for expression while maintaining appropriate boundaries on conduct.' },
-    { s:'Free expression applies to...', opts:['Faculty and students only', 'Faculty, students, and staff'], a:1, x:'Free expression applies to faculty, students, and staff, and staff help ensure an environment of free expression for all three.' },
-    { s:'In your staff role, on political matters, you...', opts:['Abide by institutional neutrality', 'Share a position on behalf of the university'], a:0, x:'Staff abide by institutional neutrality. Vanderbilt’s leadership refrains from commenting on political matters unless they directly affect the university’s core purpose of transformative education and pathbreaking research.' }
+    { s:'Staff should model...', opts:['Confrontation', 'De-escalation'], a:1, x:'De-escalation over confrontation. Staff should also model consistency in applying university rules, and respect for expression while maintaining appropriate boundaries on conduct.' }
   ]},
   types: { opts:['Demonstration', 'Protest', 'Counterprotest', 'Dissent'], prog:'question', verb:'matched', items:[
     { s:'Expression intentionally connected to another campus event or activity.', a:1, x:'A protest.' },
@@ -492,14 +503,7 @@ var DRILLS = {
     { s:'Expression independent of another campus event or activity.', a:0, x:'A demonstration.' },
     { s:'Expression responding to another organizer’s activity.', a:2, x:'A counterprotest.' }
   ]},
-  context: { opts:['May occur', 'Not allowed'], prog:'context', verb:'called', items:[
-    { s:'Holding signs.', a:0, x:'During protests and counterprotests, silent and symbolic activities, such as picketing, holding signs, turning backs, or covering ears, may occur.' },
-    { s:'Blocking entrances or exits.', a:1, x:'Expression cannot block entrances or exits.' },
-    { s:'Turning backs or covering ears.', a:0, x:'Silent and symbolic activities may occur.' },
-    { s:'Preventing the audience from hearing or seeing the speaker.', a:1, x:'Expression cannot prevent an audience from hearing or seeing a speaker. Audible activity may be restricted when it would interfere with the targeted event.' },
-    { s:'Picketing.', a:0, x:'Picketing is a silent and symbolic activity that may occur.' },
-    { s:'Preventing others from entering or participating in the event.', a:1, x:'Expression cannot prevent others from entering or participating in an event.' }
-  ]}
+
 };
 function buildDrill(el){
   var name = el.getAttribute('data-drill'), d = DRILLS[name]; if(!d) return;
@@ -668,7 +672,7 @@ function buildPrint(){
   var RECAP = [
     ['Why it matters', 'The university’s commitment is not merely to allow disagreement, but to maintain an environment in which disagreement and intellectual exploration can occur.'],
     ['Three principles', 'Free expression, open forums, and civil discourse. Protecting expression is not the same as endorsing expression.'],
-    ['Everyone, and neutrality', 'Free expression applies to faculty, students, and staff. In your staff role, abide by institutional neutrality.'],
+    ['Institutional neutrality', 'In your staff role, abide by institutional neutrality.'],
     ['Staff should model', 'Curiosity over assumption, questions over declarations when facilitating dialogue, consistency in applying university rules, de-escalation over confrontation, and respect for expression while maintaining appropriate boundaries on conduct.'],
     ['The key question', 'Not “Do I agree with this message?” but whether the expression is consistent with university policy and allows others to continue speaking, listening, teaching, learning, researching, participating, and accessing university activities.'],
     ['The staff role', 'Focus on conduct, not viewpoint. Know the appropriate contact, follow the direction of designated university officials, and avoid unnecessary escalation.']
@@ -677,7 +681,7 @@ function buildPrint(){
   html += '<section class="ps-row"><div class="ps-stat"><b>' + done + '/' + SECTIONS.length + '</b><span>activities complete</span></div><div class="ps-stat"><b>' + (score === null ? '&ndash;' : esc(score) + '/5') + '</b><span>quick check score</span></div><div class="ps-stat"><b>' + (get('myths-believed') === null ? '&ndash;' : esc(get('myths-believed')) + '/5') + '</b><span>myths I had believed</span></div></section>';
   html += '<section><h2>My one move</h2>' + (pick !== null ? '<p class="ps-sub">' + esc(CONSIDER[+pick] || '') + '</p>' : '') + '<p class="ps-write">' + (move ? esc(move) : '<span class="ps-empty">Not written yet. Lesson 6, from principle to practice.</span>') + '</p>' +
     (forum ? '<h3>Where we create opportunities to encounter different perspectives</h3><p class="ps-write">' + esc(forum) + '</p>' : '') + '</section>';
-  html += '<section><h2>My escalation pathway</h2><p class="ps-write">' + (E.name ? esc(E.name) + (E.phone ? ' &middot; ' + esc(E.phone) : '') + (E.email ? ' &middot; ' + esc(E.email) : '') : 'Contact: ______________________ &nbsp; Phone: ______________') + '</p></section>';
+  html += '<section><h2>My office’s contact</h2><p class="ps-write">Contact: ______________________ &nbsp; Phone: ______________</p></section>';
   html += '<section><h2>Keep these close</h2><table class="ps-table"><tbody>' + [['Freedom of Expression Policy', L.freedomOfExpression], ['Use of University Space', L.useOfSpace], ['Statement of Principles', L.principles], ['Community Creed', L.creed], ['Dialogue Vanderbilt', L.dialogue]].map(function(r){ return '<tr><th>' + esc(r[0]) + '</th><td>' + esc(r[1] || '') + '</td></tr>'; }).join('') + '</tbody></table><p class="ps-foot">A culture to sustain.</p></section>';
   sheet.innerHTML = html;
 }
