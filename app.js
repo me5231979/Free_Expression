@@ -182,16 +182,15 @@ if(narr.auto) window.setTimeout(narrPlay, 600);
 
 /* ══════════ PROGRESS ══════════ */
 var SECTIONS = [
-  { k:'why',        no:'01', name:'Why free expression matters', how:'Open three moments and answer the check' },
-  { k:'principles', no:'02', name:'The three core principles',   how:'Open each one and answer its check' },
+  { k:'why',        no:'01', name:'Why free expression matters', how:'Open the history and answer the check' },
+  { k:'principles', no:'02', name:'Open forums and civil discourse', how:'Open both and answer each question' },
   { k:'role',       no:'03', name:'Our responsibility as staff', how:'Pick what staff should model' },
-  { k:'myths',      no:'04', name:'Myths and realities',         how:'Flip all five cards' },
-  { k:'question',   no:'05', name:'Four kinds of expression',    how:'Match all four definitions' },
-  { k:'tpm',        no:'06', name:'Time, place, and manner',     how:'Answer all three checks' },
-  { k:'context',    no:'07', name:'Why context matters',         how:'Open all four related policies' },
-  { k:'staffrole',  no:'08', name:'Check your understanding',    how:'Answer all three scenarios' },
-  { k:'quiz',       no:'09', name:'A quick check',               how:'Score 4 of 5' },
-  { k:'practice',   no:'10', name:'From principle to practice',  how:'Pick a question and commit to one move' }
+  { k:'myths',      no:'04', name:'Common misconceptions',       how:'Agree or disagree with all five' },
+  { k:'tpm',        no:'05', name:'Time, place, and manner',     how:'Open time, place, and manner' },
+  { k:'context',    no:'06', name:'Relevant policies',           how:'Open all four policies' },
+  { k:'staffrole',  no:'07', name:'Staff role',                  how:'Answer all three scenarios' },
+  { k:'quiz',       no:'08', name:'Final check',                 how:'Score 4 of 5' },
+  { k:'practice',   no:'09', name:'From principle to practice',  how:'Pick a question and commit to one move' }
 ];
 function progIs(k){ return get('p-' + k) === '1'; }
 function progWrite(k, v){ set('p-' + k, v ? '1' : null); }
@@ -310,7 +309,7 @@ document.addEventListener('keydown', function(e){
 /* ══════════ lesson 1: three moments open in place, then one check ══════════
    Done when all three moments are open and the check is answered. */
 var whySeen = {}, whyChecked = false;
-function whyMaybeDone(){ if(Object.keys(whySeen).length === 3 && whyChecked) progDone('why'); }
+function whyMaybeDone(){ if(Object.keys(whySeen).length === 1 && whyChecked) progDone('why'); }
 document.addEventListener('fe:drilldone', function(e){ if(e.detail === 'why'){ whyChecked = true; whyMaybeDone(); } });
 (function(){
   var list = $('#momentList'); if(!list) return;
@@ -335,24 +334,14 @@ document.addEventListener('fe:drilldone', function(e){ if(e.detail === 'why'){ w
 
 /* ══════════ tabs with one check each: the three principles, and time / place / manner ══════════ */
 var TABSETS = {
-  principles: { prog:'principles', label:'The three core principles', tabs:[
-    { name:'Free Expression', lead:'The freedom to express, examine, question, and challenge ideas, including ideas that others may find disagreeable or offensive.', list:[
-        'Free expression applies to faculty, students, and staff.',
-        'At a university, this principle is especially important to the work of students and faculty. Learning and scholarship require room to ask difficult questions, investigate competing explanations, challenge arguments, develop new ideas, and respond to the ideas of others.',
-        'Vanderbilt’s Freedom of Expression policy emphasizes that when people encounter ideas contrary to their own, the response should generally be discussion, debate, and mutually respectful dialogue rather than suppression.'],
-      takeH:'Key concept', take:'Protecting expression is not the same as endorsing expression. Maintaining an environment for free expression does not require Vanderbilt, or an individual staff member, to agree with those ideas.',
-      q:'When people encounter ideas contrary to their own, the response should generally be...', opts:['Suppression of the idea', 'Discussion, debate, and mutually respectful dialogue', 'Agreement, to keep the peace'], a:1,
-      x:'Vanderbilt’s Freedom of Expression policy emphasizes discussion, debate, and mutually respectful dialogue rather than suppression.' },
+  principles: { prog:'principles', label:'Open forums and civil discourse', tabs:[
     { name:'Open Forums', lead:'Spaces and opportunities in which different ideas and perspectives can be presented, questioned, debated, and tested. Open forums can include:', list:[
         'Classroom conversations', 'Lectures and speaker programs', 'Debates', 'Student organization events', 'Dialogue programs', 'Public forums', 'Peaceful demonstrations and counterexpression', 'Informal conversations across difference'],
-      takeH:'Vanderbilt in practice', take:'Dialogue Vanderbilt brings together leaders and innovators across disciplines and Vanderbilt campuses to model civil discourse in action. Through initiatives such as 250 Conversations on America, participants engage in substantive dialogue on pressing issues and model listening, curiosity, evidence-based discussion, and disagreement with nuance and civility.',
-      reflect:'Where do we create opportunities for students to encounter different perspectives?',
       q:'Which of these can be an open forum?', opts:['Only lectures and formal debates', 'Only events planned in advance', 'Classroom conversations, peaceful demonstrations, and informal conversations across difference, among others'], a:2,
       x:'Open forums include classroom conversations, lectures and speaker programs, debates, student organization events, dialogue programs, public forums, peaceful demonstrations and counterexpression, and informal conversations across difference.' },
     { name:'Civil Discourse', lead:'Effective, respectful dialogue across difference. It provides a way to engage disagreement productively. Civil discourse does not require agreement, avoiding difficult topics, suppressing strongly held views, pretending differences do not exist, or reaching consensus.', list:[
         'Ask before assuming.', 'Listen to understand before responding.', 'Separate a person from an argument.', 'Ask questions that test ideas rather than attack people.', 'Use evidence and reasoning.', 'Acknowledge uncertainty.', 'Be willing to revise your own assumptions.', 'Make room for disagreement.', 'Remember that another person may have information or insight you do not.'],
       listH:'Habits staff can model',
-      takeH:'The Community Creed', take:'The Community Creed gives this concept a distinctly Vanderbilt vocabulary: approach intellectual questions with curiosity and humility, be courageous enough to challenge assumptions, remain open to ideas and experiences, and engage others with respect.',
       q:'Which of these does civil discourse require?', opts:['Reaching consensus', 'Avoiding difficult topics', 'None of these; it is a way to engage disagreement productively'], a:2,
       x:'Civil discourse does not require agreement, avoiding difficult topics, suppressing strongly held views, pretending differences do not exist, or reaching consensus.' }
   ]},
@@ -362,19 +351,13 @@ var TABSETS = {
         'Expression is recommended to last no longer than three hours and may not exceed 7.5 hours.',
         'Demonstrations, protests, and counterprotests may not occur at times requiring participants to sleep or gather overnight.',
         'Noise and amplified sound are subject to separate university requirements.'],
-      takeH:'Key takeaway', take:'Expression is protected, but its timing cannot prevent the university from carrying out its normal activities.',
-      q:'Which of these is a limit on time?', opts:['Expression may not exceed 7.5 hours', 'Expression cannot block entrances or exits', 'Expression cannot occur in research laboratories'], a:0,
-      x:'Expression is recommended to last no longer than three hours and may not exceed 7.5 hours. The other two are limits on manner and place.' },
+      takeH:'Key takeaway', take:'Expression is protected, but its timing cannot prevent the university from carrying out its normal activities.' },
     { name:'Place', lead:'Expression may be subject to reasonable limits on where it occurs. Demonstrations and protests cannot occur in certain spaces where expression would interfere with privacy, safety, academic activity, essential services, or the rights of others. Examples include:', list:[
         'Private offices and residences', 'Research laboratories and associated facilities', 'Classrooms or meeting spaces while classes or private meetings are occurring', 'Residential areas during quiet hours', 'Student health and wellbeing facilities', 'Vanderbilt University Medical Center and areas where access to medical services could be obstructed', 'Certain areas containing sensitive records, equipment, or materials', 'Critical university infrastructure'],
       more:'Other rules protect entrances, exits, sidewalks, pedestrian and vehicular movement, and access to university activities.',
-      takeH:'Key takeaway', take:'A person’s ability to express a message does not include a right to occupy every university space for that purpose.',
-      q:'Which of these is a limit on place?', opts:['Plans submitted at least 48 hours in advance', 'Not in classrooms while classes are occurring', 'Cannot cause physical harm or property damage'], a:1,
-      x:'Classrooms or meeting spaces while classes or private meetings are occurring are on the list of places. The other two are limits on time and manner.' },
+      takeH:'Key takeaway', take:'A person’s ability to express a message does not include a right to occupy every university space for that purpose.' },
     { name:'Manner', lead:'Expression may also be subject to reasonable limits on how it occurs. Vanderbilt permits many forms of expressive activity, including signs, picketing, marching, symbolic expression, and, in appropriate settings, chanting and speeches. But expression cannot:', list:[
-        'Block entrances or exits.', 'Prevent others from entering or participating in an event.', 'Prevent an audience from hearing or seeing a speaker.', 'Materially disrupt teaching, administration, or other authorized university activities.', 'Impede pedestrian or vehicular movement.', 'Cause physical harm or property damage.', 'Violate applicable noise and amplified-sound rules.', 'Engage in disorderly conduct or other conduct prohibited by university policy.'],
-      q:'Which of these is a limit on manner?', opts:['May not gather overnight', 'Not in student health and wellbeing facilities', 'Cannot prevent an audience from hearing or seeing a speaker'], a:2,
-      x:'Expression cannot prevent an audience from hearing or seeing a speaker. The other two are limits on time and place.' }
+        'Block entrances or exits.', 'Prevent others from entering or participating in an event.', 'Prevent an audience from hearing or seeing a speaker.', 'Materially disrupt teaching, administration, or other authorized university activities.', 'Impede pedestrian or vehicular movement.', 'Cause physical harm or property damage.', 'Violate applicable noise and amplified-sound rules.', 'Engage in disorderly conduct or other conduct prohibited by university policy.'] }
   ]}
 };
 function buildTabs(box){
@@ -387,14 +370,17 @@ function buildTabs(box){
         '<p class="fe-lead">' + esc(t.lead) + '</p>' + (t.listH ? '<p class="v-label fe-listh">' + esc(t.listH) + '</p>' : '') +
         '<ul class="fe-list' + (t.list.length > 6 ? ' two' : '') + '">' + t.list.map(function(x){ return '<li>' + esc(x) + '</li>'; }).join('') + '</ul>' + (t.more ? '<p class="fe-small">' + esc(t.more) + '</p>' : '') +
         (t.take ? '<p class="fe-take"><span class="v-label">' + esc(t.takeH) + '</span>' + esc(t.take) + '</p>' : '') + '</div>' +
-        '<div><div class="v-deck"><div class="dq cur" data-i="' + i + '"><p class="dq-s"><b>Check: ' + esc(t.name) + '</b>' + esc(t.q) + '</p><div class="dq-opts fe-stack" role="group" aria-label="Choose one">' +
-          t.opts.map(function(o, oi){ return '<button type="button" data-o="' + oi + '" aria-pressed="false">' + esc(o) + '</button>'; }).join('') + '</div><p class="dq-x" role="status"></p></div></div>' +
+        (t.q ? '<div><div class="v-deck"><div class="dq cur" data-i="' + i + '"><p class="dq-s"><b>' + esc(t.name) + '</b>' + esc(t.q) + '</p><div class="dq-opts fe-stack" role="group" aria-label="Choose one">' +
+          t.opts.map(function(o, oi){ return '<button type="button" data-o="' + oi + '" aria-pressed="false">' + esc(o) + '</button>'; }).join('') + '</div><p class="dq-x" role="status"></p></div></div>' : '') +
         (t.reflect ? '<div class="fe-card fe-reflect fe-mini"><label class="v-label" for="forumReflect">Reflection (optional)</label><p class="fe-q">' + esc(t.reflect) + '</p><textarea id="forumReflect" rows="2"></textarea><div class="fe-row"><button type="button" class="btn btn-ghost btn-sm" id="forumSave">Save</button><span class="fe-saved" id="forumSaved" role="status" aria-live="polite"></span></div></div>' : '') +
       '</div></div></div>';
     }).join('');
   var tabs = $$('[role="tab"]', box), panels = $$('[role="tabpanel"]', box);
-  function paint(){ var k = Object.keys(answered).length; if(status) status.textContent = k + ' of ' + n + ' answered.' + (k === n ? ' Activity complete.' : ''); if(k === n) progDone(T.prog); }
+  var hasQ = T.tabs.some(function(t){ return t.q; });
+  if(!hasQ) box.classList.add('fe-noq');
+  function paint(){ var k = Object.keys(answered).length; if(status) status.textContent = k + ' of ' + n + (hasQ ? ' answered.' : ' opened.') + (k === n ? ' Activity complete.' : ''); if(k === n) progDone(T.prog); }
   function sel(i, focus){
+    if(!hasQ && !answered[i]){ answered[i] = 1; tabs[i].classList.add('done'); paint(); }
     tabs.forEach(function(t, ti){ t.setAttribute('aria-selected', ti === i ? 'true' : 'false'); t.tabIndex = ti === i ? 0 : -1; });
     panels.forEach(function(p, pi){ p.hidden = pi !== i; });
     if(focus) tabs[i].focus();
@@ -416,6 +402,7 @@ function buildTabs(box){
     if(e.key === 'ArrowRight') k = (i + 1) % n; else if(e.key === 'ArrowLeft') k = (i + n - 1) % n; else if(e.key === 'Home') k = 0; else if(e.key === 'End') k = n - 1;
     if(k === null) return; e.preventDefault(); e.stopPropagation(); sel(k, true);
   });
+  if(!hasQ){ answered[0] = 1; tabs[0].classList.add('done'); }
   paint();
 }
 $$('[data-tabs]').forEach(buildTabs);
@@ -490,20 +477,13 @@ $$('[data-calls]').forEach(buildCalls);
 /* ══════════ drills: one card at a time, feedback after each ══════════ */
 var DRILLS = {
   why: { prog:null, verb:'answered', items:[
-    { s:'The university’s commitment is...', opts:['Merely to allow disagreement', 'To maintain an environment in which disagreement and intellectual exploration can occur', 'To ensure every conversation is comfortable'], a:1, x:'The university’s commitment is not merely to allow disagreement, but to maintain an environment in which disagreement and intellectual exploration can occur.' }
+    { s:'The university’s commitment is...', opts:['To allow disagreement', 'To maintain an environment in which disagreement and intellectual exploration can occur', 'To ensure every conversation is comfortable'], a:1, x:'The university’s commitment is not merely to allow disagreement, but to maintain an environment in which disagreement and intellectual exploration can occur.' }
   ]},
   role: { prog:'role', verb:'decided', items:[
     { s:'Staff should model...', opts:['Assumption', 'Curiosity'], a:1, x:'Curiosity over assumption.' },
     { s:'When facilitating dialogue, staff should model...', opts:['Questions', 'Declarations'], a:0, x:'Questions over declarations when facilitating dialogue.' },
     { s:'Staff should model...', opts:['Confrontation', 'De-escalation'], a:1, x:'De-escalation over confrontation. Staff should also model consistency in applying university rules, and respect for expression while maintaining appropriate boundaries on conduct.' }
   ]},
-  types: { opts:['Demonstration', 'Protest', 'Counterprotest', 'Dissent'], prog:'question', verb:'matched', items:[
-    { s:'Expression intentionally connected to another campus event or activity.', a:1, x:'A protest.' },
-    { s:'A short, spontaneous, nonviolent verbal or nonverbal reaction to a speaker.', a:3, x:'Dissent. By its nature, it may occur spontaneously without advance university review.' },
-    { s:'Expression independent of another campus event or activity.', a:0, x:'A demonstration.' },
-    { s:'Expression responding to another organizer’s activity.', a:2, x:'A counterprotest.' }
-  ]},
-
 };
 function buildDrill(el){
   var name = el.getAttribute('data-drill'), d = DRILLS[name]; if(!d) return;
@@ -548,14 +528,14 @@ var MYTHS = [
   var calls = {};
   grid.innerHTML = MYTHS.map(function(x, i){
     return '<div class="fe-myth" data-m="' + i + '"><div class="fe-myth-in">' +
-      '<div class="fe-myth-front"><span class="v-label">Myth ' + (i + 1) + '</span><p>' + esc(x.m) + '</p>' +
-        '<div class="fe-myth-call" role="group" aria-label="Before you flip: your call on myth ' + (i + 1) + '"><button type="button" data-c="1">I have believed this</button><button type="button" data-c="0">I knew it was a myth</button></div></div>' +
-      '<div class="fe-myth-back" aria-live="polite"><span class="v-label">Reality</span><p></p></div>' +
+      '<div class="fe-myth-front"><span class="v-label">Common misconception ' + (i + 1) + '</span><p>' + esc(x.m) + '</p>' +
+        '<div class="fe-myth-call" role="group" aria-label="Do you agree with common misconception ' + (i + 1) + '?"><button type="button" data-c="1">Agree</button><button type="button" data-c="0">Disagree</button></div></div>' +
+      '<div class="fe-myth-back" aria-live="polite"><p></p></div>' +
     '</div></div>';
   }).join('');
   function paint(){
     var n = Object.keys(calls).length, b = Object.keys(calls).filter(function(k){ return calls[k] === 1; }).length;
-    if(status) status.textContent = n + ' of ' + MYTHS.length + ' flipped.' + (n === MYTHS.length ? ' Activity complete.' : '');
+    if(status) status.textContent = n + ' of ' + MYTHS.length + ' answered.' + (n === MYTHS.length ? ' Activity complete.' : '');
     set('myths-believed', String(b));
     if(n === MYTHS.length) progDone('myths');
   }
@@ -577,9 +557,9 @@ var MYTHS = [
 var QUIZ = [
   { seg:'Free expression', q:'When Vanderbilt protects someone’s ability to express an idea, that means...', opts:['Vanderbilt agrees with the idea', 'Vanderbilt is protecting the expression, not endorsing it', 'Staff must agree with the idea'], a:1, x:'Protecting someone’s ability to express an idea does not constitute endorsement of that idea.' },
   { seg:'Civil discourse', q:'Civil discourse means...', opts:['Everyone has to be polite or agree', 'Effective, respectful dialogue across difference, which can involve deep and vigorous disagreement', 'Avoiding difficult topics'], a:1, x:'Civil discourse can involve deep and vigorous disagreement. The goal is constructive engagement, not the absence of conflict.' },
-  { seg:'Time, place, and manner', q:'When staff encounter expressive activity, the key question is generally...', opts:['Do I agree with this message?', 'Is it consistent with university policy, and does it allow others to continue speaking, listening, teaching, learning, and participating?', 'Is anyone offended?'], a:1, x:'The key question is not “Do I agree with this message?” but whether the expression is consistent with university policy and allows others to continue their activities.' },
-  { seg:'Four kinds of expression', q:'A short, spontaneous, nonviolent verbal or nonverbal reaction to a speaker is...', opts:['A demonstration', 'A counterprotest', 'Dissent'], a:2, x:'Dissent. By its nature, it may occur spontaneously without advance university review.' },
-  { seg:'The staff role', q:'Which of these is part of the staff role?', opts:['Personally resolve any protest you encounter', 'Know the appropriate university contact or escalation pathway, and follow the direction of designated university officials', 'Decide whether a message is too controversial'], a:1, x:'Do not independently attempt to resolve a protest or demonstration outside your role. Know the appropriate contact, follow designated officials, and avoid unnecessary escalation.' }
+  { seg:'Time, place, and manner', q:'Which of these is a limit on manner?', opts:['Expression may not exceed 7.5 hours', 'Expression cannot prevent an audience from hearing or seeing a speaker', 'Expression cannot occur in research laboratories'], a:1, x:'Expression cannot prevent an audience from hearing or seeing a speaker. The other two are limits on time and place.' },
+  { seg:'Time, place, and manner', q:'Where can demonstrations and protests not occur?', opts:['Classrooms while classes are occurring', 'Anywhere a message is controversial', 'Any outdoor space on campus'], a:0, x:'Classrooms or meeting spaces while classes or private meetings are occurring are among the places listed. The message never decides the place.' },
+  { seg:'Staff role', q:'Students ask a staff member to cancel an event because the speaker’s views are offensive. Which response best reflects Vanderbilt’s approach?', opts:['Cancel the event if enough students object', 'Explain that disagreement or offense alone does not determine whether expression may occur, and discuss opportunities for dialogue or counterexpression', 'Tell the students they should not object to invited speakers'], a:1, x:'Expression does not lose protection simply because it is controversial, unpopular, disagreeable, or offensive. Vanderbilt encourages discussion, debate, and dialogue in response to opposing ideas.' }
 ];
 (function(){
   var box = $('#quizBox'), status = $('#quizStatus'), done = $('#quizDone'); if(!box) return;
@@ -674,11 +654,11 @@ function buildPrint(){
     ['Three principles', 'Free expression, open forums, and civil discourse. Protecting expression is not the same as endorsing expression.'],
     ['Institutional neutrality', 'In your staff role, abide by institutional neutrality.'],
     ['Staff should model', 'Curiosity over assumption, questions over declarations when facilitating dialogue, consistency in applying university rules, de-escalation over confrontation, and respect for expression while maintaining appropriate boundaries on conduct.'],
-    ['The key question', 'Not “Do I agree with this message?” but whether the expression is consistent with university policy and allows others to continue speaking, listening, teaching, learning, researching, participating, and accessing university activities.'],
+    ['Time, place, and manner', 'Vanderbilt protects demonstrations, protests, counterprotests, and dissent while maintaining reasonable time, place, and manner rules that protect the university’s educational mission and the rights of others.'],
     ['The staff role', 'Focus on conduct, not viewpoint. Know the appropriate contact, follow the direction of designated university officials, and avoid unnecessary escalation.']
   ];
   html += '<section class="ps-recap"><h2>What the course covered</h2><ol>' + RECAP.map(function(r, i){ return '<li><span class="ps-n">' + (i + 1) + '</span><span><b>' + esc(r[0]) + '.</b> ' + esc(r[1]) + '</span></li>'; }).join('') + '</ol></section>';
-  html += '<section class="ps-row"><div class="ps-stat"><b>' + done + '/' + SECTIONS.length + '</b><span>activities complete</span></div><div class="ps-stat"><b>' + (score === null ? '&ndash;' : esc(score) + '/5') + '</b><span>quick check score</span></div><div class="ps-stat"><b>' + (get('myths-believed') === null ? '&ndash;' : esc(get('myths-believed')) + '/5') + '</b><span>myths I had believed</span></div></section>';
+  html += '<section class="ps-row"><div class="ps-stat"><b>' + done + '/' + SECTIONS.length + '</b><span>activities complete</span></div><div class="ps-stat"><b>' + (score === null ? '&ndash;' : esc(score) + '/5') + '</b><span>final check score</span></div><div class="ps-stat"><b>' + (get('myths-believed') === null ? '&ndash;' : esc(get('myths-believed')) + '/5') + '</b><span>misconceptions I agreed with</span></div></section>';
   html += '<section><h2>My one move</h2>' + (pick !== null ? '<p class="ps-sub">' + esc(CONSIDER[+pick] || '') + '</p>' : '') + '<p class="ps-write">' + (move ? esc(move) : '<span class="ps-empty">Not written yet. Lesson 6, from principle to practice.</span>') + '</p>' +
     (forum ? '<h3>Where we create opportunities to encounter different perspectives</h3><p class="ps-write">' + esc(forum) + '</p>' : '') + '</section>';
   html += '<section><h2>My office’s contact</h2><p class="ps-write">Contact: ______________________ &nbsp; Phone: ______________</p></section>';

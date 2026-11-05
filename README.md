@@ -24,6 +24,25 @@ are built from the outline's own lists (for example, a time rule offered as
 the answer to a manner question) or from its myths. The only original words
 are headlines, activity instructions, and wrong-answer distractors.
 
+### Program owner review, version 2, 2026-11-05 (applied)
+
+From *Free Expression Training: Proposed Edits* (version 2 column):
+narration voice changed to "Todd - Clear, Engaging and Educational"
+(`g14YnDYCsy3k7XLlcKlO`), slightly looser settings, for a less serious
+delivery; What you will learn shows only the six objectives (the purpose is
+in the voiceover) and no "Check" labels; Lesson 1 uses the new staff blurb
+and one combined history drop-down, and the check drops "merely"; Lesson 2
+puts Free Expression (key concept only) above two tabs, Open Forums and Civil
+Discourse, without Vanderbilt in practice, the reflection, or the Creed
+blurb; "political or social matters" in the neutrality line; "Common
+misconceptions" with Agree / Disagree buttons and no "Reality" label; slides
+7 and 8 are one page, "Time, place, and manner", with no questions and no
+key-question blurb (the four-definitions activity is removed); the context
+page is "Relevant policies"; Lesson 5 is "Staff role" with only the
+scenarios (the seven steps stay in the voiceover); the knowledge check is
+"Final check", and its questions were updated so each one tests content
+still on screen. Nine tracked activities on 12 pages.
+
 ### Program owner review, 2026-10-26 (applied)
 
 Slide-by-slide edits from *Free Expression Training: Proposed Edits*:
@@ -121,10 +140,10 @@ The five-question check covers objectives 2, 4, and 5 (four of five to pass). Th
 
 ## Narration
 
-ElevenLabs voice `kJKMPwrIKzwVkMKOfRtr`
-(https://elevenlabs.io/voices/kJKMPwrIKzwVkMKOfRtr), model
+ElevenLabs voice `g14YnDYCsy3k7XLlcKlO` (Todd - Clear, Engaging and Educational;
+was `kJKMPwrIKzwVkMKOfRtr`, Ken Franson, until 2026-11-05), model
 `eleven_multilingual_v2`, settings in `.github/tts.json`, levelled to -16 LUFS.
-13 clips, one per page, about 5,400 characters.
+12 clips, one per page, about 5,400 characters.
 
 1. Add the `ELEVENLABS_API_KEY` repository secret (Settings > Secrets and
    variables > Actions). The key needs the Text to Speech permission.

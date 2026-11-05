@@ -223,3 +223,18 @@
 .fe-poldetail{ border:1px solid var(--eyebrow); border-top:0; margin-top:-8px; border-radius:0 0 var(--r) var(--r); background:var(--card2); padding:4px 14px 12px 60px; }
 .fe-poldetail p{ color:var(--tx2); font-size:.92rem; line-height:1.5; }
 .fe-poldetail a{ display:inline-block; margin-top:6px; color:var(--link); font-size:.92rem; font-weight:600; text-decoration:underline; text-underline-offset:3px; min-height:24px; }
+
+/* ── v2 review ── */
+/* lesson 2: free expression is the banner over its two practices */
+.fe-banner{ border:1px solid var(--eyebrow); border-left:4px solid var(--eyebrow); background:var(--card2); border-radius:var(--r); padding:clamp(14px,2vw,22px) clamp(16px,2.4vw,26px); margin-bottom:clamp(14px,2.4vh,24px); }
+.fe-banner-k{ font-family:var(--serif); font-size:clamp(1.35rem,1vw + 1rem,1.85rem); line-height:1.2; color:var(--tx); margin-top:6px; }
+.fe-banner-s{ color:var(--tx2); font-size:.98rem; line-height:1.55; margin-top:6px; max-width:80ch; }
+/* tabs with no question: the panel uses the full width */
+.fe-noq .fe-panel-grid{ grid-template-columns:minmax(0,1fr); }
+/* two-column bullet lists: even spacing, read down then across */
+.fe-list.two{ display:block; columns:2; column-gap:32px; }
+.fe-list.two li{ break-inside:avoid; margin-bottom:8px; }
+@media (max-width:640px){ .fe-list.two{ columns:1; } }
+/* lesson 5: the scenarios on their own page */
+.fe-calls-wide{ margin-top:6px; }
+#staffrole .v-h{ margin-bottom:10px; }

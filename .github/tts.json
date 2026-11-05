@@ -1,12 +1,12 @@
 {
-  "_note": "ElevenLabs narration for Free Expression at Vanderbilt, voice kJKMPwrIKzwVkMKOfRtr (https://elevenlabs.io/voices/kJKMPwrIKzwVkMKOfRtr). The build workflow reads this file, generates every clip in narration-scripts.js, keeps the raw files in assets/audio/fe/source, and writes loudness-matched clips (-16 LUFS) to assets/audio/fe. Only clips whose text or settings changed are regenerated.",
-  "voice_id": "kJKMPwrIKzwVkMKOfRtr",
+  "_note": "ElevenLabs narration for Free Expression at Vanderbilt, voice 'Todd - Clear, Engaging and Educational' (g14YnDYCsy3k7XLlcKlO), chosen in the 2026-11-05 review for a slightly less serious delivery than the earlier Ken Franson voice (kJKMPwrIKzwVkMKOfRtr). The build workflow reads this file, generates every clip in narration-scripts.js, keeps the raw files in assets/audio/fe/source, and writes loudness-matched clips (-16 LUFS) to assets/audio/fe. Changing the voice or settings re-records every clip.",
+  "voice_id": "g14YnDYCsy3k7XLlcKlO",
   "model_id": "eleven_multilingual_v2",
   "output_format": "mp3_44100_128",
   "voice_settings": {
-    "stability": 0.6,
+    "stability": 0.45,
     "similarity_boost": 0.8,
-    "style": 0.0,
+    "style": 0.2,
     "use_speaker_boost": true
   },
   "audio_filter": "highpass=f=70"

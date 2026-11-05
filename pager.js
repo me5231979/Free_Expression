@@ -15,18 +15,17 @@ try{
     { sel:'#why',          key:'why',        label:'Lesson 1: Why it matters',      mode:'whole' },
     { sel:'#principles',   key:'principles', label:'Lesson 2: The core principles', mode:'whole' },
     { sel:'#role',         key:'role',       label:'Lesson 3: Our responsibility',  mode:'whole' },
-    { sel:'#myths',        key:'myths',      label:'Lesson 3: Myths',               mode:'whole' },
-    { sel:'#question',     key:'question',   label:'Lesson 4: The basic principle', mode:'whole' },
+    { sel:'#myths',        key:'myths',      label:'Lesson 3: Common misconceptions',               mode:'whole' },
     { sel:'#tpm',          key:'tpm',        label:'Lesson 4: Time, place, manner', mode:'whole' },
-    { sel:'#context',      key:'context',    label:'Lesson 4: Why context matters', mode:'whole' },
-    { sel:'#staffrole',    key:'staffrole',  label:'Lesson 5: The staff role',      mode:'whole' },
-    { sel:'#quiz',         key:'quiz',       label:'Lesson 6: Quick check',         mode:'whole' },
+    { sel:'#context',      key:'context',    label:'Lesson 4: Relevant policies', mode:'whole' },
+    { sel:'#staffrole',    key:'staffrole',  label:'Lesson 5: Staff role',      mode:'whole' },
+    { sel:'#quiz',         key:'quiz',       label:'Lesson 6: Final check',         mode:'whole' },
     { sel:'#practice',     key:'practice',   label:'Lesson 6: Principle to practice', mode:'whole' },
     { sel:'#learn',        key:'learn',      label:'Resources',                     mode:'whole', extras:['footer'] }
   ];
   /* pages whose activity is tracked; the page key is the progress key */
   var TRACKED = [
-    ['why'], ['principles'], ['role'], ['myths'], ['question'], ['tpm'], ['context'], ['staffrole'], ['quiz'], ['practice']
+    ['why'], ['principles'], ['role'], ['myths'], ['tpm'], ['context'], ['staffrole'], ['quiz'], ['practice']
   ];
   var pages = [], secFirst = {};
   var topSpan = document.getElementById('top');
