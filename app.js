@@ -29,7 +29,6 @@ function set(k, v){ mem[k] = v; if(store){ try{ v === null ? store.removeItem(KE
   put('.lk-foe', L.freedomOfExpression); put('.lk-space', L.useOfSpace); put('.lk-noise', L.noise); put('.lk-install', L.installations);
   put('.lk-principles', L.principles); put('.lk-creed', L.creed); put('.lk-dialogue', L.dialogue); put('.lk-conversations', L.conversations);
   if(C.surveyUrl){ $$('[data-survey]').forEach(function(a){ a.href = C.surveyUrl; a.hidden = false; }); }
-  if(C.contact){ var n = $('#navPcb'); if(n) n.href = 'mailto:' + C.contact; }
   /* the escalation pathway (outline section VI): a marked placeholder until config.js names it */
   var E = C.escalation || {}, et = $('#escText');
   if(et && E.name){
