@@ -27,9 +27,8 @@ are headlines, activity instructions, and wrong-answer distractors.
 ### Program owner review, version 2, 2026-11-05 (applied)
 
 From *Free Expression Training: Proposed Edits* (version 2 column):
-narration voice changed to "Todd - Clear, Engaging and Educational"
-(`g14YnDYCsy3k7XLlcKlO`), slightly looser settings, for a less serious
-delivery; What you will learn shows only the six objectives (the purpose is
+narration voice changed for a less serious delivery, to Christina
+(`X03mvPuTfprif8QBAVeJ`) with slightly looser settings; What you will learn shows only the six objectives (the purpose is
 in the voiceover) and no "Check" labels; Lesson 1 uses the new staff blurb
 and one combined history drop-down, and the check drops "merely"; Lesson 2
 puts Free Expression (key concept only) above two tabs, Open Forums and Civil
@@ -140,8 +139,9 @@ The five-question check covers objectives 2, 4, and 5 (four of five to pass). Th
 
 ## Narration
 
-ElevenLabs voice `g14YnDYCsy3k7XLlcKlO` (Todd - Clear, Engaging and Educational;
-was `kJKMPwrIKzwVkMKOfRtr`, Ken Franson, until 2026-11-05), model
+ElevenLabs voice `X03mvPuTfprif8QBAVeJ` (Christina - Natural Conversational
+American Female Narrator, https://elevenlabs.io/voices/X03mvPuTfprif8QBAVeJ;
+earlier Ken Franson `kJKMPwrIKzwVkMKOfRtr`, then briefly Todd `g14YnDYCsy3k7XLlcKlO`), model
 `eleven_multilingual_v2`, settings in `.github/tts.json`, levelled to -16 LUFS.
 12 clips, one per page, about 5,400 characters.
 

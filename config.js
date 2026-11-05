@@ -28,5 +28,5 @@ window.FE_CONFIG = {
   audio: true,
   /* where Exit goes; empty closes the tab (inside an LMS) or returns to the start */
   exitUrl: '',
-  mediaVersion: '20261105a'
+  mediaVersion: '20261105b'
 };
